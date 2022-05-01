@@ -646,7 +646,7 @@ block Blockchain::pop_block_from_blockchain()
   block popped_block;
   std::vector<transaction> popped_txs;
 
-  CHECK_AND_ASSERT_THROW_MES(m_db->height() > 1, "It is forbidden to remove ArQmA Genesis Block.");
+  CHECK_AND_ASSERT_THROW_MES(m_db->height() > 1, "It is forbidden to remove Arqma Genesis Block.");
 
   try
   {
@@ -5138,7 +5138,7 @@ void Blockchain::cancel()
 }
 
 #if defined(PER_BLOCK_CHECKPOINT)
-static const char expected_block_hashes_hash[] = "5e301ca6aca3ae52a88037164b553d321391e10062b9aa6c9e1c7713f3ae9eee";
+static const char expected_block_hashes_hash[] = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
 void Blockchain::load_compiled_in_block_hashes(const GetCheckpointsCallback& get_checkpoints)
 {
   if (get_checkpoints == nullptr || !m_fast_sync)
