@@ -481,14 +481,11 @@ namespace nodetool
     }
     else
     {
-      full_addrs.insert("144.217.242.16:19993");
-      full_addrs.insert("161.97.102.172:19993");
-      full_addrs.insert("92.222.70.207:19993");
-      full_addrs.insert("86.24.233.79:19993");
-      full_addrs.insert("139.99.106.122:19993");
-      full_addrs.insert("51.15.50.83:19993");
-      full_addrs.insert("164.68.123.118:19993");
-      full_addrs.insert("51.15.253.177:19993");
+      full_addrs.insert("80.60.19.222:38411"); //EU
+      full_addrs.insert("41.164.183.230:38411"); //Kaktus Africa
+      full_addrs.insert("46.101.74.32:38411"); //Baldtrooper  Europe/London
+      full_addrs.insert("24.92.124.82:38411"); //DocJray  USA
+      full_addrs.insert("188.68.231.40:38411"); //MrKris7100  Poland
     }
     return full_addrs;
   }
