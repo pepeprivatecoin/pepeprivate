@@ -159,7 +159,7 @@ namespace
   const command_line::arg_descriptor<bool> arg_non_deterministic = {"non-deterministic", sw::tr("Generate non-deterministic view and spend keys"), false};
   const command_line::arg_descriptor<bool> arg_allow_mismatched_daemon_version = {"allow-mismatched-daemon-version", sw::tr("Allow communicating with a daemon that uses a different RPC version"), false};
   const command_line::arg_descriptor<uint64_t> arg_restore_height = {"restore-height", sw::tr("Restore from specific blockchain height"), 0};
-  const command_line::arg_descriptor<bool> arg_do_not_relay = {"do-not-relay", sw::tr("The newly created transaction will not be relayed to the ArQ-Net"), false};
+  const command_line::arg_descriptor<bool> arg_do_not_relay = {"do-not-relay", sw::tr("The newly created transaction will not be relayed to the Morelo Network"), false};
   const command_line::arg_descriptor<bool> arg_create_address_file = {"create-address-file", sw::tr("Create an address file for new wallets"), false};
   const command_line::arg_descriptor<std::string> arg_subaddress_lookahead = {"subaddress-lookahead", tools::wallet2::tr("Set subaddress lookahead sizes to <major>:<minor>"), ""};
   const command_line::arg_descriptor<bool> arg_use_english_language_names = {"use-english-language-names", sw::tr("Display English language names"), false};
@@ -2384,13 +2384,13 @@ bool simple_wallet::set_unit(const std::vector<std::string> &args/* = std::vecto
   const std::string &unit = args[1];
   unsigned int decimal_point = CRYPTONOTE_DISPLAY_DECIMAL_POINT;
 
-  if (unit == "arq")
+  if (unit == "mrl")
     decimal_point = CRYPTONOTE_DISPLAY_DECIMAL_POINT;
-  else if (unit == "milliarq")
+  else if (unit == "millimrl")
     decimal_point = CRYPTONOTE_DISPLAY_DECIMAL_POINT - 3;
-  else if (unit == "microarq")
+  else if (unit == "micromrl")
     decimal_point = CRYPTONOTE_DISPLAY_DECIMAL_POINT - 6;
-  else if (unit == "nanoarq")
+  else if (unit == "nanomrl")
     decimal_point = 0;
   else
   {
@@ -3170,7 +3170,7 @@ bool simple_wallet::set_variable(const std::vector<std::string> &args)
     CHECK_SIMPLE_VARIABLE("priority", set_default_priority, tr("0, 1, 2, 3, or 4, or one of ") << join_priority_strings(", "));
     CHECK_SIMPLE_VARIABLE("confirm-missing-payment-id", set_confirm_missing_payment_id, tr("0 or 1"));
     CHECK_SIMPLE_VARIABLE("ask-password", set_ask_password, tr("0|1|2 (or never|action|decrypt)"));
-    CHECK_SIMPLE_VARIABLE("unit", set_unit, tr("arq, milliarq, microarq, nanoarq"));
+    CHECK_SIMPLE_VARIABLE("unit", set_unit, tr("mrl, millimrl, micromrl, nanomrl"));
     CHECK_SIMPLE_VARIABLE("min-outputs-count", set_min_output_count, tr("unsigned integer"));
     CHECK_SIMPLE_VARIABLE("min-outputs-value", set_min_output_value, tr("amount"));
     CHECK_SIMPLE_VARIABLE("merge-destinations", set_merge_destinations, tr("0 or 1"));
