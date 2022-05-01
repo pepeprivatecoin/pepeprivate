@@ -8,10 +8,10 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Development resources
 
-- Web: [xxx](xxx)
-- Mail: [support@arqma.com](mailto:support@arqma.com)
+- Web: [https://morelonetwork.pl](https://morelonetwork.pl)
+- Mail: [morelonetwork@gmail.com](mailto:morelonetwork@gmail.com)
 - GitHub: [https://github.com/MoreloNetwork/morelo](https://github.com/MoreloNetwork/morelo)
-- Discord: [xxx](xxx)
+- Discord: [https://discord.gg/36HR7KmYCa](https://discord.gg/36HR7KmYCa)
 
 ## Other Morelo related websites
 
