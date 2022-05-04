@@ -187,19 +187,20 @@ bool t_daemon::run(bool interactive)
         return false;
       }
 
+      MINFO("Starting Morelo ZMQ server...");
+
       if(!arqmaNotifier.addTCPSocket(zmq_ip_str, zmq_port_str, zmq_max_clients))
       {
-        LOG_ERROR(std::string("Failed to add TCP Socket (") << zmq_ip_str + ":" << zmq_port_str + ") to Arqma ZMQ Server");
+        LOG_ERROR(std::string("Failed to add TCP Socket (") << zmq_ip_str + ":" << zmq_port_str + ") to Morelo ZMQ Server");
         return false;
       }
 
-      MINFO("Starting Arqma ZMQ server...");
       arqmaNotifier.run();
 
-      MGINFO_GREEN(std::string("Arqma ZMQ server started at ") << zmq_ip_str + ":" + zmq_port_str << " with Maximum Allowed Clients Connections: " << zmq_max_clients << ".");
+      MGINFO_GREEN(std::string("Morelo ZMQ server started at ") << zmq_ip_str + ":" << zmq_port_str << " with Maximum Allowed Clients Connections: " << zmq_max_clients << ".");
     }
     else
-      MGINFO_GREEN(std::string("Arqma ZMQ Server Disabled"));
+      MGINFO_GREEN(std::string("Morelo ZMQ Server Disabled"));
 
     if (public_rpc_port > 0)
     {
@@ -214,7 +215,7 @@ bool t_daemon::run(bool interactive)
 
     if(zmq_enabled)
     {
-      MGINFO_GREEN(std::string("Stopping Arqma ZMQ Server."));
+      MGINFO_GREEN(std::string("Stopping Morelo ZMQ Server."));
       arqmaNotifier.stop();
     }
 

@@ -41,7 +41,7 @@
 #include "hash-ops.h"
 #include "misc_log_ex.h"
 
-#define RX_LOGCAT	"RandomARQ"
+#define RX_LOGCAT	"randomx"
 
 #if defined(_MSC_VER)
 #define THREADV __declspec(thread)
@@ -63,7 +63,6 @@ static rx_state rx_s[2] = {{CTHR_MUTEX_INIT,{0},0,0},{CTHR_MUTEX_INIT,{0},0,0}};
 
 static randomx_dataset *rx_dataset;
 static int rx_dataset_nomem;
-static int rx_dataset_nolp;
 static uint64_t rx_dataset_height;
 static THREADV randomx_vm *rx_vm = NULL;
 
@@ -162,11 +161,11 @@ static void rx_initdata(randomx_cache *rs_cache, const int miners, const uint64_
     CTHR_THREAD_TYPE *st;
     si = malloc(miners * sizeof(seedinfo));
     if (si == NULL)
-      local_abort("Couldn't allocate RandomARQ mining threadinfo");
+      local_abort("Couldn't allocate RandomX mining threadinfo");
     st = malloc(miners * sizeof(CTHR_THREAD_TYPE));
     if (st == NULL) {
       free(si);
-    local_abort("Couldn't allocate RandomARQ mining threadlist");
+      local_abort("Couldn't allocate RandomX mining threadlist");
     }
     for (i=0; i<miners-1; i++) {
       si[i].si_cache = rs_cache;
@@ -226,11 +225,11 @@ void rx_slow_hash(const uint64_t mainheight, const uint64_t seedheight, const ch
     if (cache == NULL) {
       cache = randomx_alloc_cache(flags | RANDOMX_FLAG_LARGE_PAGES);
       if (cache == NULL) {
-        mdebug(RX_LOGCAT, "Couldn't use largePages for RandomARQ cache");
+        mdebug(RX_LOGCAT, "Couldn't use largePages for RandomX cache");
         cache = randomx_alloc_cache(flags);
       }
       if (cache == NULL)
-        local_abort("Couldn't allocate RandomARQ cache");
+        local_abort("Couldn't allocate RandomX cache");
     }
   }
   if (rx_sp->rs_height != seedheight || rx_sp->rs_cache == NULL || memcmp(seedhash, rx_sp->rs_hash, HASH_SIZE)) {
@@ -252,7 +251,7 @@ void rx_slow_hash(const uint64_t mainheight, const uint64_t seedheight, const ch
         if (rx_dataset == NULL) {
           rx_dataset = randomx_alloc_dataset(RANDOMX_FLAG_LARGE_PAGES);
           if (rx_dataset == NULL) {
-            mdebug(RX_LOGCAT, "Couldn't use largePages for RandomARQ dataset");
+            mdebug(RX_LOGCAT, "Couldn't use largePages for RandomX dataset");
             rx_dataset = randomx_alloc_dataset(RANDOMX_FLAG_DEFAULT);
           }
           if (rx_dataset != NULL)
@@ -265,17 +264,14 @@ void rx_slow_hash(const uint64_t mainheight, const uint64_t seedheight, const ch
         miners = 0;
         if (!rx_dataset_nomem) {
           rx_dataset_nomem = 1;
-          mwarning(RX_LOGCAT, "Couldn't allocate RandomARQ dataset for miner");
+          mwarning(RX_LOGCAT, "Couldn't allocate RandomX dataset for miner");
         }
       }
       CTHR_MUTEX_UNLOCK(rx_dataset_mutex);
     }
-    rx_vm = NULL;
-    if(!rx_dataset_nolp)
-      rx_vm = randomx_create_vm(flags | RANDOMX_FLAG_LARGE_PAGES, rx_sp->rs_cache, rx_dataset);
+    rx_vm = randomx_create_vm(flags | RANDOMX_FLAG_LARGE_PAGES, rx_sp->rs_cache, rx_dataset);
     if(rx_vm == NULL) { //large pages failed
-      mdebug(RX_LOGCAT, "Couldn't use largePages for RandomARQ VM");
-      rx_dataset_nolp = 1;
+      mdebug(RX_LOGCAT, "Couldn't use largePages for RandomX VM");
       rx_vm = randomx_create_vm(flags, rx_sp->rs_cache, rx_dataset);
     }
     if(rx_vm == NULL) {//fallback if everything fails
@@ -283,7 +279,7 @@ void rx_slow_hash(const uint64_t mainheight, const uint64_t seedheight, const ch
       rx_vm = randomx_create_vm(flags, rx_sp->rs_cache, rx_dataset);
     }
     if (rx_vm == NULL)
-      local_abort("Couldn't allocate RandomARQ VM");
+      local_abort("Couldn't allocate RandomX VM");
   } else if (miners) {
     CTHR_MUTEX_LOCK(rx_dataset_mutex);
     if (rx_dataset != NULL && rx_dataset_height != seedheight)
@@ -324,6 +320,5 @@ void rx_stop_mining(void) {
     randomx_release_dataset(rd);
   }
   rx_dataset_nomem = 0;
-  rx_dataset_nolp = 0;
   CTHR_MUTEX_UNLOCK(rx_dataset_mutex);
 }

@@ -97,7 +97,7 @@ namespace levin
 
 
 			while(boost::interprocess::ipcdetail::atomic_read32(&m_threads_count))
-				::Sleep(50);
+				::Sleep(100);
 
 			set_handler(NULL);
 		}

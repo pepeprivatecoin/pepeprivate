@@ -52,11 +52,10 @@ arqma_add_library(p2p
 
 target_link_libraries(p2p
   PUBLIC
-    version
     cryptonote_core
+    version
     net
-    libunbound
-    miniupnpc
+    ${MINIUPNPC_LIB}
     ${Boost_CHRONO_LIBRARY}
     ${Boost_PROGRAM_OPTIONS_LIBRARY}
     ${Boost_FILESYSTEM_LIBRARY}

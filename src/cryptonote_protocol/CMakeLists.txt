@@ -52,4 +52,6 @@ target_link_libraries(cryptonote_protocol
   PUBLIC
     p2p
   PRIVATE
+    ${MINIUPNPC_LIB}
+    easylogging
     ${EXTRA_LIBRARIES})

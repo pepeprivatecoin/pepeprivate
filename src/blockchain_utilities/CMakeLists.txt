@@ -27,20 +27,6 @@
 # STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 # THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-add_library(arqma_bc_utils_std_libs INTERFACE)
-target_link_libraries(arqma_bc_utils_std_libs INTERFACE
-  cryptonote_core
-  lmdb
-  blockchain_db
-  version
-  epee
-  ${Boost_FILESYSTEM_LIBRARY}
-  ${Boost_SYSTEM_LIBRARY}
-  ${Boost_THREAD_LIBRARY}
-  ${CMAKE_THREAD_LIBS_INIT}
-  ${EXTRA_LIBRARIES})
-
-
 set(blockchain_import_sources
   blockchain_import.cpp
   bootstrap_file.cpp
@@ -127,8 +113,16 @@ arqma_add_executable(blockchain_import
 
 target_link_libraries(blockchain_import
   PRIVATE
-    arqma_bc_utils_std_libs
-    blocks)
+    cryptonote_core
+    blockchain_db
+    version
+    epee
+    ${Boost_FILESYSTEM_LIBRARY}
+    ${Boost_SYSTEM_LIBRARY}
+    ${Boost_THREAD_LIBRARY}
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${EXTRA_LIBRARIES}
+    ${Blocks})
 
 if(ARCH_WIDTH)
   target_compile_definitions(blockchain_import
@@ -146,7 +140,15 @@ arqma_add_executable(blockchain_export
 
 target_link_libraries(blockchain_export
   PRIVATE
-    arqma_bc_utils_std_libs)
+    cryptonote_core
+    blockchain_db
+    version
+    epee
+    ${Boost_FILESYSTEM_LIBRARY}
+    ${Boost_SYSTEM_LIBRARY}
+    ${Boost_THREAD_LIBRARY}
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${EXTRA_LIBRARIES})
 
 set_property(TARGET blockchain_export
 	PROPERTY
@@ -160,7 +162,15 @@ arqma_add_executable(blockchain_blackball
 target_link_libraries(blockchain_blackball
   PRIVATE
     wallet
-    arqma_bc_utils_std_libs)
+    cryptonote_core
+    blockchain_db
+    version
+    epee
+    ${Boost_FILESYSTEM_LIBRARY}
+    ${Boost_SYSTEM_LIBRARY}
+    ${Boost_THREAD_LIBRARY}
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${EXTRA_LIBRARIES})
 
 set_property(TARGET blockchain_blackball
 	PROPERTY
@@ -174,7 +184,15 @@ arqma_add_executable(blockchain_usage
 
 target_link_libraries(blockchain_usage
   PRIVATE
-    arqma_bc_utils_std_libs)
+    cryptonote_core
+    blockchain_db
+    version
+    epee
+    ${Boost_FILESYSTEM_LIBRARY}
+    ${Boost_SYSTEM_LIBRARY}
+    ${Boost_THREAD_LIBRARY}
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${EXTRA_LIBRARIES})
 
 set_property(TARGET blockchain_usage
 	PROPERTY
@@ -187,7 +205,15 @@ arqma_add_executable(blockchain_ancestry
 
 target_link_libraries(blockchain_ancestry
   PRIVATE
-    arqma_bc_utils_std_libs)
+    cryptonote_core
+    blockchain_db
+    version
+    epee
+    ${Boost_FILESYSTEM_LIBRARY}
+    ${Boost_SYSTEM_LIBRARY}
+    ${Boost_THREAD_LIBRARY}
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${EXTRA_LIBRARIES})
 
 set_property(TARGET blockchain_ancestry
 	PROPERTY
@@ -200,7 +226,15 @@ arqma_add_executable(blockchain_depth
 
 target_link_libraries(blockchain_depth
   PRIVATE
-    arqma_bc_utils_std_libs)
+    cryptonote_core
+    blockchain_db
+    version
+    epee
+    ${Boost_FILESYSTEM_LIBRARY}
+    ${Boost_SYSTEM_LIBRARY}
+    ${Boost_THREAD_LIBRARY}
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${EXTRA_LIBRARIES})
 
 set_property(TARGET blockchain_depth
 	PROPERTY
@@ -213,8 +247,16 @@ arqma_add_executable(blockchain_prune_known_spent_data
 
 target_link_libraries(blockchain_prune_known_spent_data
   PRIVATE
+    cryptonote_core
+    blockchain_db
     p2p
-    arqma_bc_utils_std_libs)
+    version
+    epee
+    ${Boost_FILESYSTEM_LIBRARY}
+    ${Boost_SYSTEM_LIBRARY}
+    ${Boost_THREAD_LIBRARY}
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${EXTRA_LIBRARIES})
 
 set_property(TARGET blockchain_prune_known_spent_data
 	PROPERTY
@@ -232,5 +274,13 @@ install(TARGETS blockchain_prune DESTINATION bin)
 
 target_link_libraries(blockchain_prune
   PRIVATE
+    cryptonote_core
+    blockchain_db
     p2p
-    arqma_bc_utils_std_libs)
+    version
+    epee
+    ${Boost_FILESYSTEM_LIBRARY}
+    ${Boost_SYSTEM_LIBRARY}
+    ${Boost_THREAD_LIBRARY}
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${EXTRA_LIBRARIES})

@@ -49,7 +49,3 @@ arqma_add_library(lmdb_lib
 target_link_libraries(lmdb_lib
   common
   lmdb)
-
-message(STATUS "Using ${ARCH_WIDTH}-bit LMDB from source tree")
-add_subdirectory(liblmdb)
-set(LMDB_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/liblmdb" CACHE STRING "LMDB Include path")

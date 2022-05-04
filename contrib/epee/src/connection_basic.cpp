@@ -80,6 +80,8 @@ namespace
 	    return std::string("NET");
 	  else if(type == e_connection_type_RPC)
 	    return std::string("RPC");
+          else if(type == e_connection_type_ZMQ)
+            return std::string("ZMQ");
 	  else if(type == e_connection_type_P2P)
 	    return std::string("P2P");
 
@@ -156,8 +158,8 @@ connection_basic::connection_basic(boost::asio::io_service& io_service, boost::s
 	  mI( new connection_basic_pimpl("peer") ),
 	  strand_(io_service),
 	  socket_(io_service, get_context(m_state.get())),
-    m_want_close_connection(false),
-    m_was_shutdown(false),
+      m_want_close_connection(false),
+      m_was_shutdown(false),
 	  m_ssl_support(ssl_support)
 {
     // add nullptr checks if removed

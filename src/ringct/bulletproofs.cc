@@ -809,7 +809,7 @@ bool bulletproof_VERIFY(const std::vector<const Bulletproof*> &proofs)
   proof_data.reserve(proofs.size());
   size_t inv_offset = 0;
   std::vector<rct::key> to_invert;
-  to_invert.reserve(11 * proofs.size());
+  to_invert.reserve(11 * sizeof(proofs));
   for (const Bulletproof *p: proofs)
   {
     const Bulletproof &proof = *p;

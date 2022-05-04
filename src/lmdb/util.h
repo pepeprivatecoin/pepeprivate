@@ -29,7 +29,7 @@
 
 #include <cstddef>
 #include <cstring>
-#include "lmdb/liblmdb/lmdb.h"
+#include <lmdb.h>
 #include <type_traits>
 #include <utility>
 
