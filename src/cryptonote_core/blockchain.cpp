@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2022, The Morelo Network
 // Copyright (c) 2018-2019, The Arqma Network
 // Copyright (c) 2014-2018, The Monero Project
 //
@@ -91,7 +92,7 @@ static const struct {
 } mainnet_hard_forks[] = {
  // version 1 from the start of the blockchain
  { 1, 0, 0, 1341378000 },
- { 16, 1, 0, 1573257000 },
+ { 15, 1, 0, 1573257000 },
 };
 
 static const struct {
@@ -102,7 +103,7 @@ static const struct {
 } testnet_hard_forks[] = {
  // version 1 from the start of the blockchain
  { 1, 0, 0, 1341378000 },
- { 16, 1, 0, 1573257000 },
+ { 15, 1, 0, 1573257000 },
 };
 
 static const struct {
@@ -113,7 +114,7 @@ static const struct {
 } stagenet_hard_forks[] = {
  // version 1 from the start of the blockchain
  { 1, 0, 0, 1341378000 },
- { 16, 1, 0, 1573257000 },
+ { 15, 1, 0, 1573257000 },
 };
 //------------------------------------------------------------------
 Blockchain::Blockchain(tx_memory_pool& tx_pool) :
@@ -476,7 +477,7 @@ bool Blockchain::init(BlockchainDB* db, const network_type nettype, bool offline
     }
     catch( const std::exception& e)
     {
-      MERROR(std::string("Failed to construct Arqma notifier ") + e.what());
+      MERROR(std::string("Failed to construct Morelo notifier ") + e.what());
     }
  }
 
@@ -622,7 +623,7 @@ block Blockchain::pop_block_from_blockchain()
   block popped_block;
   std::vector<transaction> popped_txs;
 
-  CHECK_AND_ASSERT_THROW_MES(m_db->height() > 1, "It is forbidden to remove Arqma Genesis Block.");
+  CHECK_AND_ASSERT_THROW_MES(m_db->height() > 1, "It is forbidden to remove Morelo Genesis Block.");
 
   try
   {
@@ -3729,7 +3730,7 @@ leave:
     const el::Level level = el::Level::Warning;
     MCLOG_RED(level, "global", "**********************************************************************");
     MCLOG_RED(level, "global", "A block was seen on the network with a version higher than the last");
-    MCLOG_RED(level, "global", "known one. This may be an old version of the Arqma daemon, and a software");
+    MCLOG_RED(level, "global", "known one. This may be an old version of the Morelo daemon, and a software");
     MCLOG_RED(level, "global", "update may be required to sync further. ");
     MCLOG_RED(level, "global", "**********************************************************************");
   }
@@ -4090,7 +4091,7 @@ leave:
     }
     catch( const std::exception& e)
     {
-      MERROR(std::string("Failed to construct arqma block producer") + e.what());
+      MERROR(std::string("Failed to construct morelo block producer") + e.what());
     }
   }
 
