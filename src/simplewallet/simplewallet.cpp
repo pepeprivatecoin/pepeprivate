@@ -1,4 +1,3 @@
-// Copyright (c) 2019-2022, The Morelo Network
 // Copyright (c) 2018-2019, The Arqma Network
 // Copyright (c) 2014-2018, The Monero Project
 //
@@ -160,7 +159,7 @@ namespace
   const command_line::arg_descriptor<bool> arg_non_deterministic = {"non-deterministic", sw::tr("Generate non-deterministic view and spend keys"), false};
   const command_line::arg_descriptor<bool> arg_allow_mismatched_daemon_version = {"allow-mismatched-daemon-version", sw::tr("Allow communicating with a daemon that uses a different RPC version"), false};
   const command_line::arg_descriptor<uint64_t> arg_restore_height = {"restore-height", sw::tr("Restore from specific blockchain height"), 0};
-  const command_line::arg_descriptor<bool> arg_do_not_relay = {"do-not-relay", sw::tr("The newly created transaction will not be relayed to the Morelo Network"), false};
+  const command_line::arg_descriptor<bool> arg_do_not_relay = {"do-not-relay", sw::tr("The newly created transaction will not be relayed to the ArQ-Net"), false};
   const command_line::arg_descriptor<bool> arg_create_address_file = {"create-address-file", sw::tr("Create an address file for new wallets"), false};
   const command_line::arg_descriptor<std::string> arg_subaddress_lookahead = {"subaddress-lookahead", tools::wallet2::tr("Set subaddress lookahead sizes to <major>:<minor>"), ""};
   const command_line::arg_descriptor<bool> arg_use_english_language_names = {"use-english-language-names", sw::tr("Display English language names"), false};
@@ -365,7 +364,7 @@ namespace
     std::stringstream prompt;
     prompt << sw::tr("For URL: ") << url
            << ", " << dnssec_str << std::endl
-           << sw::tr(" Morelo Address = ") << addresses[0]
+           << sw::tr(" ArQmA Address = ") << addresses[0]
            << std::endl
            << sw::tr("Is this OK?")
     ;
@@ -468,7 +467,7 @@ void simple_wallet::handle_transfer_exception(const std::exception_ptr &e, bool 
         print_money(e.tx_amount() + e.fee())  %
         print_money(e.tx_amount()) %
         print_money(e.fee()));
-      fail_msg_writer() << sw::tr("You have been trying to commit transaction with amount which is Forbidden at Morelo Network due to transactions with sagnificantly small amount transferred are taken as a \"dust_spam_transaction\" which is only slowing down the whole network and get blockchain to be bigger and bigger while its useless");
+      fail_msg_writer() << sw::tr("You have been trying to commit transaction with amount which is Forbidden at ArQmA-Network due to transactions with sagnificantly small amount transferred are taken as a \"dust_spam_transaction\" which is only slowing down the whole network and get blockchain to be bigger and bigger while its useless");
       warn_of_possible_attack = false;
     }
     catch (const tools::error::not_enough_outs_to_mix& e)
@@ -1422,7 +1421,7 @@ bool simple_wallet::export_raw_multisig(const std::vector<std::string> &args)
     for (auto &ptx: txs.m_ptx)
     {
       const crypto::hash txid = cryptonote::get_transaction_hash(ptx.tx);
-      const std::string filename = std::string("raw_multisig_morelo_tx_") + epee::string_tools::pod_to_hex(txid);
+      const std::string filename = std::string("raw_multisig_arqma_tx_") + epee::string_tools::pod_to_hex(txid);
       if (!filenames.empty())
         filenames += ", ";
       filenames += filename;
@@ -1960,25 +1959,25 @@ bool simple_wallet::public_nodes(const std::vector<std::string> &args)
 
 bool simple_wallet::welcome(const std::vector<std::string> &args)
 {
-  message_writer() << tr("Welcome to Morelo, the private cryptocurrency.");
+  message_writer() << tr("Welcome to Arqma, the private cryptocurrency.");
   message_writer() << "";
-  message_writer() << tr("Morelo, like Bitcoin, is a cryptocurrency. That is, it is digital money.");
-  message_writer() << tr("Unlike Bitcoin, your Morelo transactions and balance stay private, and not visible to the world by default.");
+  message_writer() << tr("Arqma, like Bitcoin, is a cryptocurrency. That is, it is digital money.");
+  message_writer() << tr("Unlike Bitcoin, your Arqma transactions and balance stay private, and not visible to the world by default.");
   message_writer() << tr("However, you have the option of making those available to select parties, if you choose to.");
   message_writer() << "";
-  message_writer() << tr("Morelo protects your privacy on the blockchain, and while Morelo strives to improve all the time,");
-  message_writer() << tr("no privacy technology can be 100% perfect, Morelo included.");
-  message_writer() << tr("Morelo cannot protect you from malware, and it may not be as effective as we hope against powerful adversaries.");
-  message_writer() << tr("Flaws in Morelo may be discovered in the future, and attacks may be developed to peek under some");
-  message_writer() << tr("of the layers of privacy Morelo provides. Be safe and practice defense in depth.");
+  message_writer() << tr("Arqma protects your privacy on the blockchain, and while Arqma strives to improve all the time,");
+  message_writer() << tr("no privacy technology can be 100% perfect, Arqma included.");
+  message_writer() << tr("Arqma cannot protect you from malware, and it may not be as effective as we hope against powerful adversaries.");
+  message_writer() << tr("Flaws in Arqma may be discovered in the future, and attacks may be developed to peek under some");
+  message_writer() << tr("of the layers of privacy Arqma provides. Be safe and practice defense in depth.");
   message_writer() << "";
-  message_writer() << tr("Welcome to Morelo and financial privacy. For more information, see https://morelonetwork.pl/");
+  message_writer() << tr("Welcome to Arqma and financial privacy. For more information, see https://arqma.com/");
   return true;
 }
 
 bool simple_wallet::version(const std::vector<std::string> &args)
 {
-  message_writer() << "Morelo '" << ARQMA_RELEASE_NAME << "' (v" << ARQMA_VERSION_FULL << ")";
+  message_writer() << "ArQmA '" << ARQMA_RELEASE_NAME << "' (v" << ARQMA_VERSION_FULL << ")";
   return true;
 }
 
@@ -2055,7 +2054,7 @@ bool simple_wallet::show_qr_code(const std::vector<std::string> &args)
   WTEXTON();
   try
   {
-    const std::string address = "morelo:" + m_wallet->get_subaddress_as_str({m_current_subaddress_account, subaddress_index});
+    const std::string address = "arqma:" + m_wallet->get_subaddress_as_str({m_current_subaddress_account, subaddress_index});
     const qrcodegen::QrCode qr = qrcodegen::QrCode::encodeText(address.c_str(), qrcodegen::QrCode::Ecc::LOW);
     for (int y = -2; y < qr.getSize() + 2; y+=2)
     {
@@ -3797,7 +3796,7 @@ bool simple_wallet::init(const boost::program_options::variables_map& vm)
   m_wallet->callback(this);
 
   if (welcome)
-    message_writer(console_color_yellow, true) << tr("If you are new to Morelo, type \"welcome\" for a brief overview.");
+    message_writer(console_color_yellow, true) << tr("If you are new to Arqma, type \"welcome\" for a brief overview.");
 
   return true;
 }
@@ -4003,7 +4002,7 @@ boost::optional<epee::wipeable_string> simple_wallet::new_wallet(const boost::pr
     "To start synchronizing with the daemon, use the \"refresh\" command.\n"
     "Use the \"help\" command to see the list of available commands.\n"
     "Use \"help <command>\" to see a command's documentation.\n"
-    "Always use the \"exit\" command when closing morelo-wallet-cli to save \n"
+    "Always use the \"exit\" command when closing arqma-wallet-cli to save \n"
     "your current session's state. Otherwise, you might need to synchronize \n"
     "your wallet again (your wallet keys are NOT at risk in any case).\n")
   ;
@@ -5387,7 +5386,7 @@ bool simple_wallet::transfer_main(int transfer_type, const std::vector<std::stri
     }
     else
     {
-      if (boost::starts_with(local_args[i], "morelo:"))
+      if (boost::starts_with(local_args[i], "arqma:"))
         fail_msg_writer() << tr("Invalid last argument: ") << local_args.back() << ": " << error;
       else
         fail_msg_writer() << tr("Invalid last argument: ") << local_args.back();
@@ -5632,26 +5631,26 @@ bool simple_wallet::transfer_main(int transfer_type, const std::vector<std::stri
     // actually commit the transactions
     if (m_wallet->multisig())
     {
-      bool r = m_wallet->save_multisig_tx(ptx_vector, "multisig_morelo_tx");
+      bool r = m_wallet->save_multisig_tx(ptx_vector, "multisig_arqma_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "multisig_morelo_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "multisig_arqma_tx";
       }
     }
     else if (m_wallet->watch_only())
     {
-      bool r = m_wallet->save_tx(ptx_vector, "unsigned_morelo_tx");
+      bool r = m_wallet->save_tx(ptx_vector, "unsigned_arqma_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_morelo_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_arqma_tx";
       }
     }
     else
@@ -5741,26 +5740,26 @@ bool simple_wallet::sweep_unmixable(const std::vector<std::string> &args_)
     // actually commit the transactions
     if (m_wallet->multisig())
     {
-      bool r = m_wallet->save_multisig_tx(ptx_vector, "multisig_morelo_tx");
+      bool r = m_wallet->save_multisig_tx(ptx_vector, "multisig_arqma_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "multisig_morelo_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "multisig_arqma_tx";
       }
     }
     else if (m_wallet->watch_only())
     {
-      bool r = m_wallet->save_tx(ptx_vector, "unsigned_morelo_tx");
+      bool r = m_wallet->save_tx(ptx_vector, "unsigned_arqma_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_morelo_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_arqma_tx";
       }
     }
     else
@@ -6063,26 +6062,26 @@ bool simple_wallet::sweep_main(uint64_t below, bool locked, const std::vector<st
     // actually commit the transactions
     if (m_wallet->multisig())
     {
-      bool r = m_wallet->save_multisig_tx(ptx_vector, "multisig_morelo_tx");
+      bool r = m_wallet->save_multisig_tx(ptx_vector, "multisig_arqma_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "multisig_morelo_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "multisig_arqma_tx";
       }
     }
     else if (m_wallet->watch_only())
     {
-      bool r = m_wallet->save_tx(ptx_vector, "unsigned_morelo_tx");
+      bool r = m_wallet->save_tx(ptx_vector, "unsigned_arqma_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_morelo_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_arqma_tx";
       }
     }
     else
@@ -6282,26 +6281,26 @@ bool simple_wallet::sweep_single(const std::vector<std::string> &args_)
     // actually commit the transactions
     if (m_wallet->multisig())
     {
-      bool r = m_wallet->save_multisig_tx(ptx_vector, "multisig_morelo_tx");
+      bool r = m_wallet->save_multisig_tx(ptx_vector, "multisig_arqma_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "multisig_morelo_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "multisig_arqma_tx";
       }
     }
     else if (m_wallet->watch_only())
     {
-      bool r = m_wallet->save_tx(ptx_vector, "unsigned_morelo_tx");
+      bool r = m_wallet->save_tx(ptx_vector, "unsigned_arqma_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_morelo_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_arqma_tx";
       }
     }
     else
@@ -6380,7 +6379,7 @@ bool simple_wallet::donate(const std::vector<std::string> &args_)
   local_args.push_back(amount_str);
   if (!payment_id_str.empty())
     local_args.push_back(payment_id_str);
-  message_writer() << (boost::format(tr("Donating %s %s to The Morelo Network (donations.morelonetwork.pl or %s).")) % amount_str % cryptonote::get_unit(cryptonote::get_default_decimal_point()) % ARQMA_DONATION_ADDR).str();
+  message_writer() << (boost::format(tr("Donating %s %s to The Arqma Network (donations.arqma.com or %s).")) % amount_str % cryptonote::get_unit(cryptonote::get_default_decimal_point()) % ARQMA_DONATION_ADDR).str();
   transfer(local_args);
   return true;
 }
@@ -6562,7 +6561,7 @@ bool simple_wallet::sign_transfer(const std::vector<std::string> &args_)
   std::vector<tools::wallet2::pending_tx> ptx;
   try
   {
-    bool r = m_wallet->sign_tx("unsigned_morelo_tx", "signed_morelo_tx", ptx, [&](const tools::wallet2::unsigned_tx_set &tx){ return accept_loaded_tx(tx); }, export_raw);
+    bool r = m_wallet->sign_tx("unsigned_arqma_tx", "signed_arqma_tx", ptx, [&](const tools::wallet2::unsigned_tx_set &tx){ return accept_loaded_tx(tx); }, export_raw);
     if (!r)
     {
       fail_msg_writer() << tr("Failed to sign transaction");
@@ -6582,7 +6581,7 @@ bool simple_wallet::sign_transfer(const std::vector<std::string> &args_)
       txids_as_text += (", ");
     txids_as_text += epee::string_tools::pod_to_hex(get_transaction_hash(t.tx));
   }
-  success_msg_writer(true) << tr("Transaction successfully signed to file ") << "signed_morelo_tx" << ", txid " << txids_as_text;
+  success_msg_writer(true) << tr("Transaction successfully signed to file ") << "signed_arqma_tx" << ", txid " << txids_as_text;
   if (export_raw)
   {
     std::string rawfiles_as_text;
@@ -6590,7 +6589,7 @@ bool simple_wallet::sign_transfer(const std::vector<std::string> &args_)
     {
       if (i > 0)
         rawfiles_as_text += ", ";
-      rawfiles_as_text += "signed_morelo_tx_raw" + (ptx.size() == 1 ? "" : ("_" + std::to_string(i)));
+      rawfiles_as_text += "signed_arqma_tx_raw" + (ptx.size() == 1 ? "" : ("_" + std::to_string(i)));
     }
     success_msg_writer(true) << tr("Transaction raw hex data exported to ") << rawfiles_as_text;
   }
@@ -6610,7 +6609,7 @@ bool simple_wallet::submit_transfer(const std::vector<std::string> &args_)
   try
   {
     std::vector<tools::wallet2::pending_tx> ptx_vector;
-    bool r = m_wallet->load_tx("signed_morelo_tx", ptx_vector, [&](const tools::wallet2::signed_tx_set &tx){ return accept_loaded_tx(tx); });
+    bool r = m_wallet->load_tx("signed_arqma_tx", ptx_vector, [&](const tools::wallet2::signed_tx_set &tx){ return accept_loaded_tx(tx); });
     if (!r)
     {
       fail_msg_writer() << tr("Failed to load transaction from file");
@@ -6763,7 +6762,7 @@ bool simple_wallet::get_tx_proof(const std::vector<std::string> &args)
   try
   {
     std::string sig_str = m_wallet->get_tx_proof(txid, info.address, info.is_subaddress, args.size() == 3 ? args[2] : "");
-    const std::string filename = "morelo_tx_proof";
+    const std::string filename = "arqma_tx_proof";
     if (epee::file_io_utils::save_string_to_file(filename, sig_str))
       success_msg_writer() << tr("signature file saved to: ") << filename;
     else
@@ -6978,7 +6977,7 @@ bool simple_wallet::get_spend_proof(const std::vector<std::string> &args)
   try
   {
     const std::string sig_str = m_wallet->get_spend_proof(txid, args.size() == 2 ? args[1] : "");
-    const std::string filename = "morelo_spend_proof";
+    const std::string filename = "arqma_spend_proof";
     if (epee::file_io_utils::save_string_to_file(filename, sig_str))
       success_msg_writer() << tr("signature file saved to: ") << filename;
     else
@@ -7073,7 +7072,7 @@ bool simple_wallet::get_reserve_proof(const std::vector<std::string> &args)
   try
   {
     const std::string sig_str = m_wallet->get_reserve_proof(account_minreserve, args.size() == 2 ? args[1] : "");
-    const std::string filename = "morelo_reserve_proof";
+    const std::string filename = "arqma_reserve_proof";
     if (epee::file_io_utils::save_string_to_file(filename, sig_str))
       success_msg_writer() << tr("signature file saved to: ") << filename;
     else
@@ -8899,7 +8898,7 @@ void simple_wallet::commit_or_save(std::vector<tools::wallet2::pending_tx>& ptx_
       cryptonote::blobdata blob;
       tx_to_blob(ptx.tx, blob);
       const std::string blob_hex = epee::string_tools::buff_to_hex_nodelimer(blob);
-      const std::string filename = "raw_morelo_tx" + (ptx_vector.size() == 1 ? "" : ("_" + std::to_string(i++)));
+      const std::string filename = "raw_arqma_tx" + (ptx_vector.size() == 1 ? "" : ("_" + std::to_string(i++)));
       if (epee::file_io_utils::save_string_to_file(filename, blob_hex))
         success_msg_writer(true) << tr("Transaction successfully saved to ") << filename << tr(", txid ") << txid;
       else
@@ -8958,12 +8957,12 @@ int main(int argc, char* argv[])
   bool should_terminate = false;
   std::tie(vm, should_terminate) = wallet_args::main(
    argc, argv,
-   "morelo-wallet-cli [--wallet-file=<filename>|--generate-new-wallet=<filename>] [<COMMAND>]",
-    sw::tr("This is the command line morelo wallet. It needs to connect to a morelo\ndaemon to work correctly.\nWARNING: Do not reuse your Morelo keys on an another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy."),
+   "arqma-wallet-cli [--wallet-file=<filename>|--generate-new-wallet=<filename>] [<COMMAND>]",
+    sw::tr("This is the command line arqma wallet. It needs to connect to a arqma\ndaemon to work correctly.\nWARNING: Do not reuse your ArQmA keys on an another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy."),
     desc_params,
     positional_options,
     [](const std::string &s, bool emphasis){ tools::scoped_message_writer(emphasis ? epee::console_color_white : epee::console_color_default, true) << s; },
-    "morelo-wallet-cli.log"
+    "arqma-wallet-cli.log"
   );
 
   if (!vm)

@@ -1,4 +1,3 @@
-# Copyright (c) 2021-2022, The Morelo Network
 # Copyright (c) 2018-2021, The Arqma Network
 # Copyright (c) 2014-2021, The Monero Project
 #
@@ -89,7 +88,7 @@ message(STATUS "${Green}Total available virtual memory:${ColourReset}${BoldBlue}
 math(EXPR totalmemavail "${freememsys} + ${freememvirt}")
 message(STATUS "${Green}Total available memory:${ColourReset}${BoldBlue} ${totalmemavail} Mib ${ColourReset}")
 if(totalmemavail LESS 3500)
-  die("Morelo needs at least 3.5 Gb of available memory (physical+virtual) to compile!")
+  die("Arqma needs at least 3.5 Gb of available memory (physical+virtual) to compile!")
 endif()
 
 if(NOT CMAKE_BUILD_TYPE)
@@ -125,7 +124,7 @@ if(IOS)
     include(CMakeLists_IOS.txt)
 endif()
 
-project(morelo
+project(arqma
   VERSION 7.1.0
   LANGUAGES CXX C)
 
@@ -952,7 +951,7 @@ else()
     set(DEBUG_FLAGS "${DEBUG_FLAGS} -O0 ")
   endif()
   
-  # At least some CLANGs default to not enough for Morelo
+  # At least some CLANGs default to not enough for Arqma
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ftemplate-depth=900")
 
   if(NOT DEFINED USE_LTO_DEFAULT)
