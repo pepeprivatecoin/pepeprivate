@@ -1,4 +1,5 @@
-// Copyright (c) 2018-2019, The Arqma Network
+// Copyright (c) 2019-2022, The Morelo Network
+// Copyright (c) 2019-2019, The Arqma Network
 // Copyright (c) 2014-2018, The Monero Project
 //
 // All rights reserved.

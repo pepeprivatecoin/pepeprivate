@@ -169,7 +169,7 @@ bool construct_miner_tx(size_t height, size_t median_weight, uint64_t already_ge
 
     uint64_t block_reward;
     if (height == 1) {
-      block_reward = MONEY_PREMINE;
+      block_reward = config::blockchain_settings::MONEY_PREMINE;
     }
     else if(!get_block_reward(median_weight, current_block_weight, already_generated_coins, block_reward, hard_fork_version))
     {

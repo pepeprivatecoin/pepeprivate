@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2022, The Morelo Network
 // Copyright (c) 2018-2019, The Arqma Network
 // Copyright (c) 2014-2018, The Monero Project
 //
@@ -91,15 +92,7 @@ static const struct {
 } mainnet_hard_forks[] = {
  // version 1 from the start of the blockchain
  { 1, 0, 0, 1341378000 },
- { 7, 1, 0, 1528750800 },
- { 8, 100, 0, 1528751200 },
- { 9, 7000, 0, 1530320400 },
- { 10, 61250, 0, 1543615200 },
- { 11, 131650, 0, 1552424400 },
- { 12, 183700, 0, 1558656000 },
- { 13, 248200, 0, 1566511680 },
- { 14, 248920, 0, 1566598080 },
- { 15, 303666, 0, 1573257000 },
+ { 15, 1, 0, 1573257000 },
 };
 
 static const struct {
@@ -110,14 +103,7 @@ static const struct {
 } testnet_hard_forks[] = {
  // version 1 from the start of the blockchain
  { 1, 0, 0, 1341378000 },
- { 7, 1, 0, 1528750800 },
- { 8, 10, 0, 1528751200 },
- { 9, 20, 0, 1530248400 },
- { 10, 100, 0, 1538352000 },
- { 11, 800, 0, 1552424400 },
- { 12, 1000, 0, 1552824400 },
- { 13, 2000, 0, 1566511680 },
- { 14, 3000, 0, 1566598080 },
+ { 15, 1, 0, 1573257000 },
 };
 
 static const struct {
@@ -128,16 +114,7 @@ static const struct {
 } stagenet_hard_forks[] = {
  // version 1 from the start of the blockchain
  { 1, 0, 0, 1341378000 },
- { 7, 1, 0, 1528750800 },
- { 8, 100, 0, 1528751200 },
- { 9, 200, 0, 1530248400 },
- { 10, 500, 0, 1538352000 },
- { 11, 800, 0, 1552424400 },
- { 12, 1500, 0, 1554336000 },
- { 13, 2000, 0, 1560348000 },
- { 14, 2720, 0, 1560351600 },
- { 15, 12100, 0, 1570414500 },
- { 16, 12800, 0, 1570414510 },
+ { 15, 1, 0, 1573257000 },
 };
 //------------------------------------------------------------------
 Blockchain::Blockchain(tx_memory_pool& tx_pool) :
@@ -500,7 +477,7 @@ bool Blockchain::init(BlockchainDB* db, const network_type nettype, bool offline
     }
     catch( const std::exception& e)
     {
-      MERROR(std::string("Failed to construct Arqma notifier ") + e.what());
+      MERROR(std::string("Failed to construct Morelo notifier ") + e.what());
     }
  }
 
@@ -646,7 +623,7 @@ block Blockchain::pop_block_from_blockchain()
   block popped_block;
   std::vector<transaction> popped_txs;
 
-  CHECK_AND_ASSERT_THROW_MES(m_db->height() > 1, "It is forbidden to remove ArQmA Genesis Block.");
+  CHECK_AND_ASSERT_THROW_MES(m_db->height() > 1, "It is forbidden to remove Morelo Genesis Block.");
 
   try
   {
@@ -1368,7 +1345,7 @@ if(version >= 16)
 
   if(height == 1)
   {
-    base_reward = MONEY_PREMINE;
+    base_reward = config::blockchain_settings::MONEY_PREMINE;
   }
   else if(height > 1 && base_reward + fee < money_in_use)
   {
@@ -3753,7 +3730,7 @@ leave:
     const el::Level level = el::Level::Warning;
     MCLOG_RED(level, "global", "**********************************************************************");
     MCLOG_RED(level, "global", "A block was seen on the network with a version higher than the last");
-    MCLOG_RED(level, "global", "known one. This may be an old version of the Arqma daemon, and a software");
+    MCLOG_RED(level, "global", "known one. This may be an old version of the Morelo daemon, and a software");
     MCLOG_RED(level, "global", "update may be required to sync further. ");
     MCLOG_RED(level, "global", "**********************************************************************");
   }
@@ -4114,7 +4091,7 @@ leave:
     }
     catch( const std::exception& e)
     {
-      MERROR(std::string("Failed to construct arqma block producer") + e.what());
+      MERROR(std::string("Failed to construct morelo block producer") + e.what());
     }
   }
 
@@ -5138,7 +5115,7 @@ void Blockchain::cancel()
 }
 
 #if defined(PER_BLOCK_CHECKPOINT)
-static const char expected_block_hashes_hash[] = "5e301ca6aca3ae52a88037164b553d321391e10062b9aa6c9e1c7713f3ae9eee";
+static const char expected_block_hashes_hash[] = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
 void Blockchain::load_compiled_in_block_hashes(const GetCheckpointsCallback& get_checkpoints)
 {
   if (get_checkpoints == nullptr || !m_fast_sync)
