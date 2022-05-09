@@ -206,11 +206,11 @@ namespace config
    uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x1a29e1; // Wallet prefix: emo MainNet
    uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x8a8e1; // Wallet prefix: emi MainNet
    uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0xeaae1; // Wallet prefix: ems MainNet
-   uint16_t const P2P_DEFAULT_PORT = 38411;
-   uint16_t const RPC_DEFAULT_PORT = 38422;
-   uint16_t const ZMQ_DEFAULT_PORT = 38433;
+   uint16_t const P2P_DEFAULT_PORT = 38301;
+   uint16_t const RPC_DEFAULT_PORT = 38302;
+   uint16_t const ZMQ_DEFAULT_PORT = 38303;
    boost::uuids::uuid const NETWORK_ID = { {
-       0x11, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x44, 0x11, 0xFF, 0xFF, 0xFF, 0x55, 0x11, 0x1B
+       0x01, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x44, 0x13, 0xFF, 0xFF, 0xFF, 0x55, 0x11, 0x1A
      } }; // 
    std::string const GENESIS_TX = "011201ff00011e026bc5c7db8a664f652d78adb587ac4d759c6757258b64ef9cba3c0354e64fb2e42101abca6a39c561d0897be183eb0143990eba201aa7d2c652ab0555d28bb4b70728";
    uint32_t const GENESIS_NONCE = 38411;
@@ -220,11 +220,11 @@ namespace config
      uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x80662; // Wallet prefix: eto... // decimal prefix: 21450
      uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x4562; // Wallet prefix: eti... // decimal prefix: 20554
      uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x4762; // Wallet prefix: ets... // decimal prefix: 21066
-     uint16_t const P2P_DEFAULT_PORT = 47461;
-     uint16_t const RPC_DEFAULT_PORT = 47462;
-     uint16_t const ZMQ_DEFAULT_PORT = 47463;
+     uint16_t const P2P_DEFAULT_PORT = 38311;
+	 uint16_t const RPC_DEFAULT_PORT = 38312;
+	 uint16_t const ZMQ_DEFAULT_PORT = 38313;
      boost::uuids::uuid const NETWORK_ID = { {
-         0x11, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x11, 0x66, 0xFF, 0xFF, 0xFF, 0x66, 0x11, 0x1B
+         0x01, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x44, 0x13, 0xFF, 0xFF, 0xFF, 0x55, 0x11, 0x1B
        } }; // TEST
    }
 
@@ -233,11 +233,11 @@ namespace config
      uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x7b62; // Wallet prefix: exo... // decimal prefix: 14794
      uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x19f9e2; // Wallet prefix: exi... // decimal prefix: 1524426
      uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x1ffbe2; // Wallet prefix: exs... // decimal prefix: 1934538
-     uint16_t const P2P_DEFAULT_PORT = 46461;
-     uint16_t const RPC_DEFAULT_PORT = 46462;
-     uint16_t const ZMQ_DEFAULT_PORT = 46463;
+     uint16_t const P2P_DEFAULT_PORT = 38321;
+	 uint16_t const RPC_DEFAULT_PORT = 38322;
+	 uint16_t const ZMQ_DEFAULT_PORT = 38323;
      boost::uuids::uuid const NETWORK_ID = { {
-         0x11, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x11, 0x77, 0xFF, 0xFF, 0xFF, 0x77, 0x11, 0x1C
+         0x01, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x44, 0x13, 0xFF, 0xFF, 0xFF, 0x55, 0x11, 0x1C
        } }; // STAGE
    }
 
@@ -255,7 +255,7 @@ namespace config
    namespace tx_settings
    {
      const uint8_t ARQMA_TX_CONFIRMATIONS_REQUIRED = 4; // How many blocks are needed to confirm transaction sent.
-     const uint8_t ARQMA_TX_VERSION = 2; // Current Transaction Version Valid on Arq-Net
+     const uint8_t ARQMA_TX_VERSION = 2; // Current Transaction Version Valid on Morelo Network
      const uint64_t TRANSACTION_SIZE_LIMIT = 48 * 1024; // I did set it to 48kB for now but it need to be verified.
      const uint64_t MAX_TRANSACTIONS_IN_BLOCK = 1024; // Maximum allowed transactions in One Block
    }
@@ -269,9 +269,9 @@ namespace config
 
    namespace governance
    {
-     static constexpr const char* MAINNET_WALLET_ADDRESS = "emo1hsdY9BLhGUUZqFqNUgGowHwEcW9LzQ9kjN8GJrqbBhXe6L37gZ5Y2pa8eNRiyzabyP8ScDyi2hcbzH4akSvE8SuYr1dFeX";
-     static constexpr const char* TESTNET_WALLET_ADDRESS = "eto1UJjpbxTgM2kzrQNgrkazZLCyhGvcHaoFvsHypZ8JdvsXFQ9kb6zEMAxxJrkzBWKx1ZgxArfgiTudcrUvFBya7EwgQiftGn";
-     static constexpr const char* STAGENET_WALLET_ADDRESS = "exoiwUAF2AEDC8oniRiMXKEkmsLEtw7XNVm2Lc2NJsejU4nN2zWrCF9cjrPgEgUeiHLQ8gNkwyoHVRmkGpS87Eqh4G1yAjseHF";
+     static constexpr const char* MAINNET_WALLET_ADDRESS = "";
+     static constexpr const char* TESTNET_WALLET_ADDRESS = "";
+     static constexpr const char* STAGENET_WALLET_ADDRESS = "";
    }
 }
 
