@@ -243,8 +243,8 @@ namespace config
 
    namespace blockchain_settings
    {
-     const uint64_t PREMINE_BURN = 3500000000000000; // Will need to be set after knowing exact amount.
-     const uint64_t MONEY_PREMINE = 3500000000000000; // Premine amnount
+     const uint64_t PREMINE_BURN = 47000000000000000; // Will need to be set after knowing exact amount.
+     const uint64_t MONEY_PREMINE = 47000000000000000; // Premine amnount
      const uint64_t MAXIMUM_BLOCK_SIZE_LIMIT = 2 * 1024 * 1024; // It is set to 2048kB (2MB)
      const uint64_t MINIMUM_BLOCK_SIZE_LIMIT = 1 * 1024 * 1024; // It is set to 1024kB (1MB)
      const uint8_t ARQMA_GENESIS_BLOCK_MAJOR_VERSION = 1;
