@@ -45,12 +45,9 @@ namespace tools
 
     MDEBUG("Checking updates for " << buildtag << " " << software);
 
-    // All four ArQ-Net domains have DNSSEC on and valid
+    // All four Morelo Network domains have DNSSEC on and valid
     static const std::vector<std::string> dns_urls = {
-      "updates.arqma.com",
-      "updates.myarqma.com",
-      "updates.supportarqma.eu",
-      "updates.supportarqma.com"
+      "" //TODO
     };
 
     if (!tools::dns_utils::load_txt_records_from_dns(records, dns_urls))
@@ -100,7 +97,7 @@ namespace tools
 
   std::string get_update_url(const std::string &software, const std::string &buildtag, const std::string &version, bool user)
   {
-    const char *base = user ? "https://downloads.arqma.com" : "https://get.arqma.com";
+    const char *base = user ? "" : ""; //TODO
 #ifdef _WIN32
     static const char *extension = strncmp(buildtag.c_str(), "install-", 8) ? ".zip" : ".exe";
 #else
