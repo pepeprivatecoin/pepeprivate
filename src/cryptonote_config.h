@@ -101,7 +101,7 @@
 #define CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V11          360
 #define DIFFICULTY_WINDOW_V11                           90
 
-#define DIFFICULTY_TARGET_V16                           60
+#define DIFFICULTY_TARGET_V16                           120
 #define DIFFICULTY_WINDOW_V16                           45
 #define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V16           11
 #define CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V16          180
@@ -213,7 +213,7 @@ namespace config
        0x01, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x44, 0x13, 0xFF, 0xFF, 0xFF, 0x55, 0x11, 0x1A
      } }; // 
    std::string const GENESIS_TX = "011201ff00011e026bc5c7db8a664f652d78adb587ac4d759c6757258b64ef9cba3c0354e64fb2e42101abca6a39c561d0897be183eb0143990eba201aa7d2c652ab0555d28bb4b70728";
-   uint32_t const GENESIS_NONCE = 38411;
+   uint32_t const GENESIS_NONCE = 38311;
 
    namespace testnet
    {
