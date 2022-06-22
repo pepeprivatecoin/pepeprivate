@@ -215,6 +215,7 @@ namespace cryptonote
   {
     std::vector<std::string> records;
 
+	return false;
     // All four Morelo Network domains have DNSSEC on and valid
     static const std::vector<std::string> dns_urls = { "checkpoints.morelonetwork.pl" };
 
