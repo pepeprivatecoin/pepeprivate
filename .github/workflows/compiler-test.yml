@@ -1,6 +1,11 @@
 name: ci/gh-actions/depends
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - '**/README.md'
 
 env:
   APT_SET_CONF: |
@@ -10,6 +15,7 @@ env:
   CCACHE_SETTINGS: |
         ccache --max-size=150M
         ccache --set-config=compression=true
+
 jobs:
   build-macos:
     runs-on: ubuntu-18.04
@@ -19,22 +25,25 @@ jobs:
       fail-fast: false
       matrix:
         toolchain:
-          - name: "build-depends-armv7"
+          - name: "ARM v7"
             host: "arm-linux-gnueabihf"
             packages: "python3 gperf g++-arm-linux-gnueabihf"
-          - name: "build-depends-armv8"
+          - name: "ARM v8"
             host: "aarch64-linux-gnu"
-            packages: "python3 gperf g++-aarch64-linux-gnu"
-          - name: "build-depends-armv8 RPi"
-            host: "aarch64-linux-gnu"
-            packages: "python3 gperf g++-aarch64-linux-gnu"
             cmake_opts: "-DNO_AES=ON"
-          - name: "build-depends-windows-x64"
+            packages: "python3 gperf g++-aarch64-linux-gnu"
+          - name: "Win64"
             host: "x86_64-w64-mingw32"
             packages: "cmake python3 g++-mingw-w64-x86-64 qttools5-dev-tools"
-          - name: "build-depends-x86_64-linux"
+          - name: "x86_64 Linux"
             host: "x86_64-unknown-linux-gnu"
             packages: "gperf cmake python3-zmq libdbus-1-dev libharfbuzz-dev"
+          - name: "Cross-Mac x86_64"
+            host: "x86_64-apple-darwin11"
+            packages: "cmake imagemagick libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev python3-setuptools-git"
+          - name: "Cross-Mac aarch64"
+            host: "aarch64-apple-darwin11"
+            packages: "cmake imagemagick libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev python3-setuptools-git"
     name: ${{ matrix.toolchain.name }}
     steps:
     - uses: actions/checkout@v1
@@ -57,6 +66,12 @@ jobs:
           depends-${{ matrix.toolchain.host }}-${{ hashFiles('contrib/depends/packages/*') }}
           depends-${{ matrix.toolchain.host }}-
 # Static cache
+    - name: OSX SDK cache
+      uses: actions/cache@v2
+      with:
+        path: contrib/depends/sdk-sources
+        key: sdk-${{ matrix.toolchain.host }}-${{ matrix.toolchain.osx_sdk }}
+        restore-keys: sdk-${{ matrix.toolchain.host }}-${{ matrix.toolchain.osx_sdk }}
     - name: set apt conf
       run: ${{env.APT_SET_CONF}}
     - name: install dependencies
@@ -71,7 +86,7 @@ jobs:
         ${{env.CCACHE_SETTINGS}}
         make depends target=${{ matrix.toolchain.host }} cmake_opts=${{ matrix.toolchain.cmake_opts }} -j2
     - uses: actions/upload-artifact@v2
-      if: ${{ matrix.toolchain.host == 'x86_64-w64-mingw32' || matrix.toolchain.host == 'x86_64-unknown-linux-gnu' || matrix.toolchain.host == 'aarch64-linux-gnu' || 'arm-linux-gnueabihf' }}
+      if: ${{ matrix.toolchain.host == 'x86_64-w64-mingw32' || matrix.toolchain.host == 'x86_64-apple-darwin11' || matrix.toolchain.host == 'x86_64-unknown-linux-gnu' }}
       with:
         name: ${{ matrix.toolchain.name }}
         path: |
