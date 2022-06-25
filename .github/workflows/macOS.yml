@@ -1,0 +1,20 @@
+name: macOS builder
+
+on: [push, pull_request]
+
+jobs:
+  build-macos:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        submodules: recursive
+    - name: update brew and install dependencies
+      run: brew update && brew install autoconf autogen automake binutils coreutils libsodium openssl pkg-config boost hidapi ldns expat libunwind-headers readline ccache
+    - name: build
+      run: make release
+    - name: Upload mac artifacts
+      uses: actions/upload-artifact@master
+      with:
+        name: macos
+        path: 'build/**/**/morelo*'
