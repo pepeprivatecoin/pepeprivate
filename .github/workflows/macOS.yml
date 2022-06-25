@@ -10,7 +10,7 @@ jobs:
       with:
         submodules: recursive
     - name: update brew and install dependencies
-      run: brew update && brew install autoconf autogen automake binutils coreutils libsodium openssl pkg-config boost hidapi ldns expat libunwind-headers readline ccache
+      run: brew update && brew install autoconf autogen automake binutils coreutils libsodium openssl pkg-config boost hidapi ldns expat libunwind-headers readline ccache unbound
     - name: build
       run: make release
     - name: Upload mac artifacts
