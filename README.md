@@ -2,8 +2,8 @@
 
 
 Copyright (c) 2020-2022, The Morelo Network
-Copyright (c) 2018-2020, The Arqma Network    
-Copyright (c) 2014-2021, The Monero Project  
+Copyright (c) 2018-2020, The Arqma Network
+Copyright (c) 2014-2021, The Monero Project
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Development resources
@@ -15,15 +15,14 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Other Morelo related websites
 
-- xxx
+- CryptUnit: [https://www.cryptunit.com/coin/MRL](https://www.cryptunit.com/coin/MRL)
+- Blockchain Explorer: [https://explorer.morelonetwork.pl/](https://explorer.morelonetwork.pl/)
 
 ## Morelo Social-Media Websites
 
-- xxx
-
-## Morelo Exchange Websites
-
-- xxx
+- Reddit: [https://www.reddit.com/r/Morelo/](https://www.reddit.com/r/Morelo/)
+- Telegram: [https://t.me/morelonetwork](https://t.me/morelonetwork)
+- Twitter: [https://twitter.com/MoreloNetwork](https://twitter.com/MoreloNetwork)
 
 ## Introduction
 
