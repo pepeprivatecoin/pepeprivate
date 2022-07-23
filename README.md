@@ -87,7 +87,8 @@ That build is from the master branch, which is used for active development and c
 ##### [Boost](https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.gz)
 
 ### Install cmake and boost from source on Ubuntu/Debian
-```wget https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3.tar.gz
+```
+wget https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3.tar.gz
 tar -xvf cmake-3.17.3.tar.gz
 cd cmake-3.17.3
 ./bootstrap
@@ -100,7 +101,8 @@ cd boost_1_73_0
 ./bootstrap.sh
 ./b2
 sudo ./b2 install
-sudo ./b2 headers```
+sudo ./b2 headers
+```
 
 
 ##### Morelo build been tested on Ubuntu Server 20.04 Focal Fosa with above releases as long with [gcc9.3](https://gcc.gnu.org/gcc-9/)
