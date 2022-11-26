@@ -215,8 +215,9 @@ namespace cryptonote
   {
     std::vector<std::string> records;
 
-    // All four ArQ-Net domains have DNSSEC on and valid
-    static const std::vector<std::string> dns_urls = { "checkpoints.morelonetwork.pl" };
+	return false;
+    // All four Morelo Network domains have DNSSEC on and valid
+    static const std::vector<std::string> dns_urls = { };//TODO "checkpoints.morelonetwork.pl" };
 
     static const std::vector<std::string> testnet_dns_urls = {
     };
@@ -254,7 +255,7 @@ namespace cryptonote
         ADD_CHECKPOINT(height, hashStr);
       }
     }
-    return true;
+    return false;
   }
 
   bool checkpoints::load_new_checkpoints(const std::string &json_hashfile_fullpath, network_type nettype, bool dns)

@@ -477,7 +477,9 @@ namespace nodetool
     }
     else
     {
-      full_addrs.insert("188.68.231.40:38301"); //MrKris7100 Poland
+      full_addrs.insert("144.24.188.100:38301"); //MrKris7100 Oracle
+      full_addrs.insert("130.162.53.247:38301"); //MrKris7100 Oracle 2
+      full_addrs.insert("141.148.245.234:38301"); //sniperviperman Oracle
 	  full_addrs.insert("80.60.19.222:38301"); //sniperviperman EU
       full_addrs.insert("41.164.183.230:38301"); //Kaktus Africa
       full_addrs.insert("46.101.74.32:38301"); //Baldtrooper  Europe/London
