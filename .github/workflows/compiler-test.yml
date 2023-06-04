@@ -42,14 +42,14 @@ jobs:
         submodules: recursive
 # Most volatile cache
     - name: ccache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ~/.ccache
         key: ccache-${{ matrix.toolchain.host }}-${{ github.sha }}
         restore-keys: ccache-${{ matrix.toolchain.host }}-
 # Less volatile cache
     - name: depends cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: contrib/depends/built
         key: depends-${{ matrix.toolchain.host }}-${{ hashFiles('contrib/depends/packages/*') }}
