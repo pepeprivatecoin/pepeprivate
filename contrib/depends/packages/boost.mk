@@ -1,8 +1,8 @@
 package=boost
-$(package)_version=1_79_0
-$(package)_download_path=https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/
+$(package)_version=1_73_0
+$(package)_download_path=https://boostorg.jfrog.io/artifactory/main/release/1.73.0/source/
 $(package)_file_name=boost_$($(package)_version).tar.bz2
-$(package)_sha256_hash=475d589d51a7f8b3ba2ba4eda022b170e562ca3b760ee922c146b6c65856ef39
+$(package)_sha256_hash=4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402
 $(package)_dependencies=libiconv
 
 define $(package)_set_vars
