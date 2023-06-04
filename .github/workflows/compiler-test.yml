@@ -37,7 +37,7 @@ jobs:
             packages: "gperf cmake python3-zmq libdbus-1-dev libharfbuzz-dev"
     name: ${{ matrix.toolchain.name }}
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
       with:
         submodules: recursive
 # Most volatile cache
