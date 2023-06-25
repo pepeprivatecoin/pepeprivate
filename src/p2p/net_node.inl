@@ -477,13 +477,10 @@ namespace nodetool
     }
     else
     {
-      full_addrs.insert("144.24.188.100:38301"); //MrKris7100 Oracle
-      full_addrs.insert("130.162.53.247:38301"); //MrKris7100 Oracle 2
-      full_addrs.insert("141.148.245.234:38301"); //sniperviperman Oracle
-	  full_addrs.insert("80.60.19.222:38301"); //sniperviperman EU
-      full_addrs.insert("41.164.183.230:38301"); //Kaktus Africa
-      full_addrs.insert("46.101.74.32:38301"); //Baldtrooper  Europe/London
-      full_addrs.insert("24.92.124.82:38301"); //DocJray  USA
+      full_addrs.insert("80.60.19.222:38301"); //sniperviperman EU
+      full_addrs.insert("41.164.183.226:38301"); //Kaktus Africa
+      full_addrs.insert("41.164.183.225:38301"); //Kaktus Africa
+      full_addrs.insert("104.202.163.72:38301"); //DocJray  USA
     }
     return full_addrs;
   }
