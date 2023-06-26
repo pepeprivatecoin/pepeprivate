@@ -12,7 +12,7 @@ env:
         ccache --max-size=150M
         ccache --set-config=compression=true
 jobs:
-  build-ubuntu:
+  build-windows:
     runs-on: ubuntu-20.04
     env:
       CCACHE_TEMPDIR: /tmp/.ccache-temp
