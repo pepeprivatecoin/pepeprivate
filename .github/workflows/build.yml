@@ -1,5 +1,4 @@
-jobs:
-  name: ci/gh-actions/build
+name: ci/gh-actions/build
 
 on: [push, pull_request]
 
