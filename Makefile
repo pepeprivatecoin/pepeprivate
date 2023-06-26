@@ -85,7 +85,7 @@ cmake-release:
 	cd $(builddir)/release && cmake -D BUILD_TESTS=OFF -D CMAKE_BUILD_TYPE=Release $(topdir)
 
 release: cmake-release
-	cd $(builddir)/release && $(MAKE) -D BUILD_TESTS=OFF
+	cd $(builddir)/release && $(MAKE)
 
 release-asan:
 	mkdir -p $(builddir)/release-asan
