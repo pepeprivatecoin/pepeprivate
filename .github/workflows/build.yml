@@ -25,25 +25,6 @@ env:
         ccache --set-config=compression=true
 
 jobs:
-  build-macos:
-    runs-on: macOS-latest
-    env:
-      CCACHE_TEMPDIR: /tmp/.ccache-temp
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        submodules: recursive
-    - uses: actions/cache@v3
-      with:
-        path: /Users/runner/Library/Caches/ccache
-        key: ccache-${{ runner.os }}-build-${{ github.sha }}
-        restore-keys: ccache-${{ runner.os }}-build-
-    - name: install dependencies
-      run: HOMEBREW_NO_AUTO_UPDATE=1 brew install boost hidapi openssl zmq libpgm miniupnpc expat libunwind-headers protobuf ccache
-    - name: build
-      run: |
-        ${{env.CCACHE_SETTINGS}}
-        make -j3
 
   build-windows:
     runs-on: windows-latest
@@ -69,7 +50,7 @@ jobs:
     - name: build
       run: |
         ${{env.CCACHE_SETTINGS}}
-        make release-static-win64 -j2
+        make release-static-win -j2
 
 # See the OS labels and monitor deprecations here:
 # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
@@ -99,23 +80,3 @@ jobs:
       run: |
         ${{env.CCACHE_SETTINGS}}
         ${{env.BUILD_DEFAULT_LINUX}}
-
-
-  source-archive:
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-        submodules: recursive
-    - name: archive
-      run: |
-        pip install git-archive-all
-        export VERSION="morelo-$(git describe)"
-        export OUTPUT="$VERSION.tar"
-        echo "OUTPUT=$OUTPUT" >> $GITHUB_ENV
-        /home/runner/.local/bin/git-archive-all --prefix "$VERSION/" --force-submodules "$OUTPUT"
-    - uses: actions/upload-artifact@v3
-      with:
-        name: ${{ env.OUTPUT }}
-        path: /home/runner/work/morelo/morelo/${{ env.OUTPUT }}
