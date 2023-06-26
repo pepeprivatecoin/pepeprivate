@@ -75,12 +75,9 @@ jobs:
 # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
 
   build-ubuntu:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-20.04
     env:
       CCACHE_TEMPDIR: /tmp/.ccache-temp
-    strategy:
-      matrix:
-        os: [ubuntu-20.04]
     steps:
     - uses: actions/checkout@v3
       with:
