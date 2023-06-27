@@ -24,6 +24,11 @@ jobs:
             packages: "cmake python3 g++-mingw-w64-x86-64 qttools5-dev-tools"
     name: ${{ matrix.toolchain.name }}
     steps:
+    - name: Install boost
+      uses: MarkusJx/install-boost@v2.4.1
+      id: install-boost
+      with:
+          boost_version: 1.73.0
     - uses: actions/checkout@v3
       with:
         submodules: recursive
