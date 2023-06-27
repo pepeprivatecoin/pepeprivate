@@ -58,6 +58,9 @@ jobs:
       run: |
         sudo update-alternatives --set ${{ matrix.toolchain.host }}-g++ $(which ${{ matrix.toolchain.host }}-g++-posix)
         sudo update-alternatives --set ${{ matrix.toolchain.host }}-gcc $(which ${{ matrix.toolchain.host }}-gcc-posix)
+    run: cmake .
+      env:
+          BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
     - name: build
       run: |
         ${{env.CCACHE_SETTINGS}}
@@ -91,6 +94,10 @@ jobs:
           boost_version: 1.73.0
     - name: install morelo dependencies
       run: sudo apt -y install build-essential cmake graphviz doxygen libunwind8-dev pkg-config libssl-dev libsodium-dev libhidapi-dev libusb-1.0-0-dev gperf libreadline-dev
+    - name: Configure CMake
+      run: cmake .
+      env:
+          BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
     - name: build
       run: make release -j2
     - name: Upload linux artifacts
