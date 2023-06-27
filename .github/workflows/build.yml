@@ -52,7 +52,7 @@ jobs:
     - name: set apt conf
       run: ${{env.APT_SET_CONF}}
     - name: install dependencies
-      run: sudo apt update; sudo apt -y install build-essential libtool cmake autotools-dev automake pkg-config bsdmainutils curl git ca-certificates ccache ${{ matrix.toolchain.packages }}
+      run: sudo apt update; sudo apt -y install libsodium-dev build-essential libtool cmake autotools-dev automake pkg-config bsdmainutils curl git ca-certificates ccache ${{ matrix.toolchain.packages }}
     - name: prepare w64-mingw32
       if: ${{ matrix.toolchain.host == 'x86_64-w64-mingw32' }}
       run: |
@@ -100,7 +100,7 @@ jobs:
       env:
           BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
     - name: build
-      run: make release -j2
+      run: make -j2
     - name: Upload linux artifacts
       uses: actions/upload-artifact@master
       with:
