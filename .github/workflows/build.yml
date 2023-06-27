@@ -58,7 +58,8 @@ jobs:
       run: |
         sudo update-alternatives --set ${{ matrix.toolchain.host }}-g++ $(which ${{ matrix.toolchain.host }}-g++-posix)
         sudo update-alternatives --set ${{ matrix.toolchain.host }}-gcc $(which ${{ matrix.toolchain.host }}-gcc-posix)
-    run: cmake .
+    - name: Configure CMake
+      run: cmake .
       env:
           BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
     - name: build
