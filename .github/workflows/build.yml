@@ -84,6 +84,9 @@ jobs:
       id: install-boost
       with:
           boost_version: 1.73.0
+    - name: Build boost
+      run: ./bootstrap.sha
+      run: ./b2 install
     - name: install morelo dependencies
       run: sudo apt -y install build-essential cmake graphviz doxygen libunwind8-dev pkg-config libssl-dev libsodium-dev libhidapi-dev libusb-1.0-0-dev gperf libreadline-dev
     - name: Configure CMake
