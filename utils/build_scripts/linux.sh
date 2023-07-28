@@ -24,7 +24,9 @@ sudo ./b2 headers
 cd ..
 
 #Build morelo from source
-git clone https://github.com/MoreloNetwork/morelo
+git clone https://github.com/MoreloNetwork/morelo --recursive
 cd morelo
+git submodule init
+git submodule update
 cmake .
 make -j4
