@@ -1348,7 +1348,7 @@ if(version >= 16)
 
   if(height == 1)
   {
-    base_reward = MONEY_PREMINE;
+    base_reward = config::blockchain_settings::MONEY_PREMINE;
   }
   else if(height > 1 && base_reward + fee < money_in_use)
   {
