@@ -481,14 +481,14 @@ namespace nodetool
     }
     else
     {
-      full_addrs.insert("84.247.153.41:18993");
-      full_addrs.insert("84.247.153.40:18993");
-      full_addrs.insert("84.247.153.39:18993");
-      full_addrs.insert("207.180.197.202:18993");
-      full_addrs.insert("207.180.197.103:18993");
-      full_addrs.insert("207.180.196.171:18993");
-      full_addrs.insert("31.220.98.108:18993");
-	  full_addrs.insert("31.220.98.107:18993");
+      full_addrs.insert("84.247.153.41:16993");
+      full_addrs.insert("84.247.153.40:16993");
+      full_addrs.insert("84.247.153.39:16993");
+      full_addrs.insert("207.180.197.202:16993");
+      full_addrs.insert("207.180.197.103:16993");
+      full_addrs.insert("207.180.196.171:16993");
+      full_addrs.insert("31.220.98.108:16993");
+	  full_addrs.insert("31.220.98.107:16993");
     }
     return full_addrs;
   }
