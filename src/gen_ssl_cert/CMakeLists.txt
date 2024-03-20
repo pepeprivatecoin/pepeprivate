@@ -46,5 +46,5 @@ add_dependencies(gen_ssl_cert
   version)
 set_property(TARGET gen_ssl_cert
   PROPERTY
-    OUTPUT_NAME "morelo-generate-ssl-certificate")
+    OUTPUT_NAME "pepeprivate-generate-ssl-certificate")
 install(TARGETS gen_ssl_cert DESTINATION bin)

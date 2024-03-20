@@ -1,45 +1,48 @@
-## Morelo Network
+## Pepeprivate Network
 
-
-Copyright (c) 2020-2024, The Morelo Network
-Copyright (c) 2018-2020, The Arqma Network
-Copyright (c) 2014-2021, The Monero Project
+Copyright (c) 2024, The Pepe Private Network
+Copyright (c) 2020-2024, The Morelo Network Copyright
+Copyright (c) 2018-2021, The Arqma Network
+Copyright (c) 2014-2021, The Monero Project  
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Development resources
 
-- Web: [http://mrl.stx.nl](http://mrl.stx.nl:2002/)
-- Mail: [morelonetwork@gmail.com](mailto:morelonetwork@gmail.com)
-- GitHub: [https://github.com/MoreloNetwork/morelo](https://github.com/MoreloNetwork/morelo)
-- Discord: [https://discord.gg/36HR7KmYCa](https://discord.gg/36HR7KmYCa)
+- Web: http://pepeprivate.com/
+- Mail: admin@pepeprivate.com
+- GitHub: https://github.com/pepeprivatecoin
+- Telegram: https://t.me/pepeprivate
+- Matrix chat: 
 
-## Other Morelo related websites
+## Other Pepeprivate related websites
 
-- CryptUnit: [https://www.cryptunit.com/coin/MRL](https://www.cryptunit.com/coin/MRL)
-- Blockchain Explorer: [https://explorer.morelonetwork.pl/](https://explorer.morelonetwork.pl/)
+NEEDS UPDATE
 
-## Morelo Social-Media Websites
+## Pepeprivate Social-Media Websites
 
-- Telegram: [https://t.me/morelonetwork](https://t.me/morelonetwork)
-- Twitter: [https://twitter.com/MoreloNetwork](https://twitter.com/MoreloNetwork)
+- Pepe Private X: https://twitter.com/PepePrivateCoin
+
+
+## Pepeprivate Exchange Websites
+
 
 ## Introduction
 
-Morelo is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
+Pepeprivate is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
 
-**Privacy:** Morelo uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
+**Privacy:** Pepeprivate uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
 
 **Security:** Using the power of a distributed peer-to-peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25 word mnemonic seed that is only displayed once, and can be written down to backup the wallet. Wallet files are encrypted with a passphrase to ensure they are useless if stolen.
 
-**Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Morelo is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
+**Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Pepeprivate is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
 
 ## SSL
 
-As a network, Morelo supports complete, cryptographically secured connections at all levels. This includes, but is not limited to Morelo Network Nodes (Full nodes), Remote Nodes and all wallets - CLI and GUI for desktop, and Android and iOS [ iOS is under development].    
+As a network, Pepeprivate supports complete, cryptographically secured connections at all levels. This includes, but is not limited to Pepeprivate Network Nodes (Full nodes), Remote Nodes and all wallets - CLI and GUI for desktop, and Android and iOS [ iOS is under development].    
 
-Morelo Network will be consistently implementing the highest security protocols to achieve the greatest privacy for all transactions, as well as all communications made over the Morelo Network.
+Pepeprivate Network will be consistently implementing the highest security protocols to achieve the greatest privacy for all transactions, as well as all communications made over the Pepeprivate Network.
 
-The use of SSL connections means that there will not be any possibility to use the Morelo Network with unsecured or tampered connections (daemons), and that your privacy will remain a feature built in a protocol level.
+The use of SSL connections means that there will not be any possibility to use the Pepeprivate Network with unsecured or tampered connections (daemons), and that your privacy will remain a feature built in a protocol level.
 
  * Below is an example how to generate SSL Keys with openssl
 
@@ -52,11 +55,11 @@ The use of SSL connections means that there will not be any possibility to use t
 
 ## About this project
 
-This is the core implementation of Morelo. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Morelo that uses the protocol and network in a compatible manner.
+This is the core implementation of Pepeprivate. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Pepeprivate that uses the protocol and network in a compatible manner.
 
 As with many development projects, the repository on Github is considered to be the "staging" area for the latest changes. Before changes are merged into that branch on the main repository, they are tested by individual developers in their own branches, submitted as a pull request, and then subsequently tested by contributors who focus on testing and code reviews. That having been said, the repository should be carefully considered before using it in a production environment, unless there is a patch in the repository for a particular show-stopping issue you are experiencing. It is generally a better idea to use a tagged release for stability.
 
-**Anyone is welcome to contribute to Morelo's codebase!** If you have a fix or code change, feel free to submit it as a pull request directly to the "master" branch. In cases where the change is relatively small or does not affect other parts of the codebase it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.
+**Anyone is welcome to contribute to Pepeprivate's codebase!** If you have a fix or code change, feel free to submit it as a pull request directly to the "master" branch. In cases where the change is relatively small or does not affect other parts of the codebase it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.
 
 ## License
 
@@ -66,7 +69,7 @@ See [LICENSE](LICENSE).
 
 If you want to help out, see [CONTRIBUTING](CONTRIBUTING.md) for a set of guidelines.
 
-## Compiling Morelo from source
+## Compiling Pepeprivate from source
 
 ## Build
 
@@ -74,37 +77,18 @@ If you want to help out, see [CONTRIBUTING](CONTRIBUTING.md) for a set of guidel
 
 That build is from the master branch, which is used for active development and can be either unstable or incompatible with release software. Please compile release branches.
 
-[![TravisCI master branch](https://img.shields.io/travis/morelo/morelo/master?label=master%20branch&style=for-the-badge)](https://travis-ci.org/morelo/morelo)
+[![TravisCI master branch](https://img.shields.io/travis/pepeprivate/pepeprivate/master?label=master%20branch&style=for-the-badge)](https://travis-ci.org/pepeprivate/pepeprivate)
 ![Monitored by DiscordHooks](https://img.shields.io/static/v1?label=Monitored%20by&message=DiscordHooks&color=brightgreen&style=for-the-badge)
 
 ### Dependencies
 
-#### In order to sucessfull compile Morelo You need boost 1.73.0 version and cmake version 3.17.3 or higher.
+#### We are strongly suggest to update cmake and boost to the latest available release.
 
 ##### [Cmake v3.17.3](https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3.tar.gz)
 
 ##### [Boost](https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.gz)
 
-### Install cmake and boost from source on Ubuntu/Debian
-```
-wget https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3.tar.gz
-tar -xvf cmake-3.17.3.tar.gz
-cd cmake-3.17.3
-./bootstrap
-make
-sudo make install
-
-wget https://boostorg.jfrog.io/artifactory/main/release/1.73.0/source/boost_1_73_0.tar.gz
-tar -xvf boost_1_73_0.tar.gz
-cd boost_1_73_0
-./bootstrap.sh
-./b2
-sudo ./b2 install
-sudo ./b2 headers
-```
-
-
-##### Morelo build been tested on Ubuntu Server 20.04 Focal Fosa with above releases as long with [gcc9.3](https://gcc.gnu.org/gcc-9/)
+##### Pepeprivate build been tested on Ubuntu Server 20.04 Focal Fosa with above releases as long with [gcc9.3](https://gcc.gnu.org/gcc-9/)
 
 The following table summarizes the tools and libraries required to build. A
 few of the libraries are also included in this repository (marked as
@@ -118,9 +102,9 @@ library archives (`.a`).
 | Dep          | Min. version  | Vendored | Debian/Ubuntu pkg  | Arch pkg     | Fedora            | Optional | Purpose        |
 | ------------ | ------------- | -------- | ------------------ | ------------ | ----------------- | -------- | -------------- |
 | GCC          | 7.3.0         | NO       | `build-essential`  | `base-devel` | `gcc`             | NO       |                |
-| CMake        | 3.17.3        | NO       | `cmake`            | `cmake`      | `cmake`           | NO       |                |
+| CMake        | 3.12.0        | NO       | `cmake`            | `cmake`      | `cmake`           | NO       |                |
 | pkg-config   | any           | NO       | `pkg-config`       | `base-devel` | `pkgconf`         | NO       |                |
-| Boost        | 1.73          | NO       | `libboost-all-dev` | `boost`      | `boost-devel`     | NO       | C++ libraries  |
+| Boost        | 1.62          | NO       | `libboost-all-dev` | `boost`      | `boost-devel`     | NO       | C++ libraries  |
 | OpenSSL      | 1.1.1         | NO       | `libssl-dev`       | `openssl`    | `openssl-devel`   | NO       | sha256 sum     |
 | libsodium    | 1.0.16        | NO       | `libsodium-dev`    | ?            | `libsodium-devel` | NO       | Cryptography   |
 | libunwind    | any           | NO       | `libunwind8-dev`   | `libunwind`  | `libunwind-devel` | YES      | Stack traces   |
@@ -140,11 +124,11 @@ library archives (`.a`).
 [1] On Debian/Ubuntu `libgtest-dev` only includes sources and headers. You must
 build the library binary manually. This can be done with the following command:
 
-`$ sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make && sudo mv libg* /usr/lib/`
+`sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make && sudo mv libg* /usr/lib/`
 
-Debian / Ubuntu one liner for all dependencies (Excluding boost and cmake)
+Debian / Ubuntu one liner for all dependencies
 
-`$ sudo apt update && sudo apt install --yes git build-essential curl pkg-config libssl-dev libsodium-dev libunwind-dev liblzma-dev libreadline-dev libldns-dev libexpat1-dev doxygen graphviz libudev-dev libusb-1.0-0-dev libhidapi-dev xsltproc gperf autoconf automake libtool-bin`
+`$ sudo apt update && sudo apt install --yes git build-essential curl cmake pkg-config libboost-all-dev libssl-dev libsodium-dev libunwind-dev liblzma-dev libreadline-dev libldns-dev libexpat1-dev doxygen graphviz libudev-dev libusb-1.0-0-dev libhidapi-dev xsltproc gperf autoconf automake libtool-bin`
 
 Install all dependencies at once on OSX:
 
@@ -154,16 +138,16 @@ Install all dependencies at once on OSX:
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone https://github.com/morelo/morelo`
+`$ git clone https://github.com/pepeprivatecoin/pepeprivate.git`
 
 If you already have a repo cloned, initialize and update:
 
-`$ cd morelo && git checkout release-v0.6.1`
+`$ cd pepeprivate && git checkout`
 `$ git submodule init && git submodule update`
 
 ### Build instructions
 
-Morelo uses the CMake build system and a top-level [Makefile](Makefile) that
+Pepeprivate uses the CMake build system and a top-level [Makefile](Makefile) that
 invokes cmake commands as needed.
 
 #### On Linux and OS X
@@ -172,15 +156,15 @@ invokes cmake commands as needed.
 
 * Change to the root of the source code directory and build:
 
-	`$ cd morelo && make release`
+	`$ cd pepeprivate && make release`
 
 	*Optional*: If your machine has several cores and enough memory, enable parallel build by running `make -j<number of threads>` instead of `make`. For this to be worthwhile, the machine should have one core and about 2GB of RAM available per thread.
 
 * The resulting executables can be found in `build/release/bin`
 
-* Add `PATH="$PATH:$HOME/morelo/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/pepeprivate/build/release/bin"` to `.profile`
 
-* Run Morelo with `morelod --detach`
+* Run Pepeprivate with `pepeprivated --detach`
 
 * **Optional**: build and run the test suite to verify the binaries:
 
@@ -208,7 +192,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * `$ apt-get update && apt-get upgrade` to install all of the latest software
 
-* Install the dependencies for Morelo from the 'Debian' column in the table above.
+* Install the dependencies for Pepeprivate from the 'Debian' column in the table above.
 
 * Increase the system swap size:
 
@@ -217,10 +201,10 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 	`$ CONF_SWAPSIZE=1024`
 	`$sudo /etc/init.d/dphys-swapfile start`
 
-* Clone morelo and checkout most recent release version:
+* Clone pepeprivate and checkout most recent release version:
 
-	`$ git clone https://github.com/morelo/morelo.git`
-	`$ cd morelo`
+	`$ git clone https://github.com/pepeprivate/pepeprivate.git`
+	`$ cd pepeprivate`
 
 * Build:
 
@@ -230,15 +214,15 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * The resulting executables can be found in `build/release/bin`
 
-* Add `PATH="$PATH:$HOME/morelo/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/pepeprivate/build/release/bin"` to `.profile`
 
-* Run Morelo with `morelod --detach`
+* Run Pepeprivate with `pepeprivated --detach`
 
 * You may wish to reduce the size of the swap file after the build has finished, and delete the boost directory from your home directory
 
 #### *Note for Raspbian Jessie users:*
 
-If you are using the older Raspbian Jessie image, compiling Morelo is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with Morelo, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
+If you are using the older Raspbian Jessie image, compiling Pepeprivate is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with Pepeprivate, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
 
 * As before, `$ apt-get update && apt-get upgrade` to install all of the latest software, and increase the system swap size
 
@@ -247,7 +231,7 @@ If you are using the older Raspbian Jessie image, compiling Morelo is a bit more
 	`$ CONF_SWAPSIZE=1024`
 	`$ sudo /etc/init.d/dphys-swapfile start`
 
-* Then, install the dependencies for ArQmA except `libunwind` and `libboost-all-dev`
+* Then, install the dependencies for PepePrivate except `libunwind` and `libboost-all-dev`
 
 * Install the latest version of boost (this may first require invoking `$ apt-get remove --purge libboost*` to remove a previous version if you're not using a clean install):
 
@@ -264,7 +248,7 @@ If you are using the older Raspbian Jessie image, compiling Morelo is a bit more
 
 * Wait ~4 hours
 
-* From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone morelo and checkout most recent release version" step.
+* From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone pepeprivate and checkout most recent release version" step.
 
 #### On Windows:
 
@@ -300,13 +284,13 @@ application.
 
 **Building**
 
-* Download Morelo with command:
+* Download Pepeprivate with command:
 
-	`$ git clone https://github.com/morelo/morelo`
+	`$ git clone https://github.com/pepeprivate/pepeprivate`
 
 * Change branch to last Release:
 
-	`$ cd morelo && git checkout release-v0.6.1`
+	`$ cd pepeprivate && git checkout release-v0.6.1`
 
 * Activate and update submodules:
 
@@ -324,13 +308,13 @@ application.
 
 * The resulting executables can be found in `build/debug/bin`
 
-*** Morelo does Not support 32-bit Windows anymore ***
+*** Pepeprivate does Not support 32-bit Windows anymore ***
 
 ### On FreeBSD:
 
-The project can be built from scratch by following instructions for Linux above. If you are running morelo in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
+The project can be built from scratch by following instructions for Linux above. If you are running pepeprivate in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
 
-We expect to add Morelo into the ports tree in the near future, which will aid in managing installations using ports or packages.
+We expect to add Pepeprivate into the ports tree in the near future, which will aid in managing installations using ports or packages.
 
 ### On OpenBSD:
 
@@ -345,7 +329,7 @@ The doxygen and graphviz packages are optional and require the xbase set.
 The Boost package has a bug that will prevent librpc.a from building correctly. In order to fix this, you will have to Build boost yourself from scratch. Follow the directions here (under "Building Boost"):
 https://github.com/bitcoin/bitcoin/blob/master/doc/build-openbsd.md
 
-You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Morelo.
+You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Pepeprivate.
 
 To build: `$ env CC=egcc CXX=eg++ CPP=ecpp DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/path/to/the/boost/you/built make release-static-64`
 
@@ -406,11 +390,11 @@ The default Solaris linker can't be used, you have to install GNU ld, then run c
 ### On Linux for Android (using docker):
 
 ### Build image
-`docker build -f utils/build_scripts/android32.Dockerfile -t morelo-android .`
+`docker build -f utils/build_scripts/android32.Dockerfile -t pepeprivate-android .`
 ### Create container
-`docker create -it --name morelo-android morelo-android bash`
+`docker create -it --name pepeprivate-android pepeprivate-android bash`
 ### Get binaries
-`docker cp morelo-android:/opt/android/morelo/build/release/bin .`
+`docker cp pepeprivate-android:/opt/android/pepeprivate/build/release/bin .`
 
 ### Building portable statically linked binaries
 
@@ -424,7 +408,7 @@ By default, in either dynamically or statically linked builds, binaries target t
 
 ### Cross Compiling
 
-You can also cross-compile Morelo static binaries on Linux for Windows and macOS with the `depends` system.
+You can also cross-compile Pepeprivate static binaries on Linux for Windows and macOS with the `depends` system.
 
 * `make depends target=x86_64-linux-gnu` for 64-bit linux binaries.
 * `make depends target=x86_64-w64-mingw32` for 64-bit windows binaries. Requires: python3 g++-mingw-w64-x86-64 wine1.6 bc
@@ -436,22 +420,22 @@ You can also cross-compile Morelo static binaries on Linux for Windows and macOS
 
 The required packages are the names for each toolchain on apt. Depending on your OS Distribution, they may have different names.
 
-Using `depends` might also be easier to compile Morelo on Windows than using MSYS. Activate Windows Subsystem for Linux (WSL) with a distribution (for example Ubuntu), install the apt build-essentials and follow the `depends` steps as stated above.
+Using `depends` might also be easier to compile Pepeprivate on Windows than using MSYS. Activate Windows Subsystem for Linux (WSL) with a distribution (for example Ubuntu), install the apt build-essentials and follow the `depends` steps as stated above.
 
 ### Compability with older Linux Versions < GLIBC_2.25
 
 * `make depends-compat target=x86_64-linux-gnu` for 64-bit linux binaries.
 
 
-## Running morelod
+## Running pepeprivated
 
 The build places the binary in `bin/` sub-directory within the build directory
 from which cmake was invoked (repository root by default). To run in
 foreground:
 
-`$ ./bin/morelod`
+`$ ./bin/pepeprivated`
 
-To list all available options, run `./bin/morelod --help`.  Options can be
+To list all available options, run `./bin/pepeprivated --help`.  Options can be
 specified either on the command line or in a configuration file passed by the
 `--config-file` argument.  To specify an option in the configuration file, add
 a line with the syntax `argumentname=value`, where `argumentname` is the name
@@ -459,17 +443,17 @@ of the argument without the leading dashes, for example `log-level=1`.
 
 To run in background:
 
-`$ ./bin/morelod --log-file morelod.log --detach`
+`$ ./bin/pepeprivated --log-file pepeprivated.log --detach`
 
 To run as a systemd service, copy
-[morelod.service](utils/systemd/morelod.service) to `/etc/systemd/system/` and
-[morelod.conf](utils/conf/morelod.conf) to `/etc/`. The [example
-service](utils/systemd/morelod.service) assumes that the user `morelo` exists
+[pepeprivated.service](utils/systemd/pepeprivated.service) to `/etc/systemd/system/` and
+[pepeprivated.conf](utils/conf/pepeprivated.conf) to `/etc/`. The [example
+service](utils/systemd/pepeprivated.service) assumes that the user `pepeprivate` exists
 and its home is the data directory specified in the [example
-config](utils/conf/morelod.conf).
+config](utils/conf/pepeprivated.conf).
 
 If you're on Mac, you may need to add the `--max-concurrency 1` option to
-morelo-wallet-cli, and possibly morelod, if you get crashes refreshing.
+pepeprivate-wallet-cli, and possibly pepeprivated, if you get crashes refreshing.
 
 ## Internationalization
 
@@ -483,31 +467,31 @@ See [README.i18n.md](README.i18n.md).
 > used solely for relaying transactions received over local RPC. This provides
 > privacy and better protection against surrounding node (sybil) attacks.
 
-While Morelo isn't made to integrate with Tor, it can be used wrapped with torsocks, by
+While Pepeprivate isn't made to integrate with Tor, it can be used wrapped with torsocks, by
 setting the following configuration parameters and environment variables:
 
 * `--p2p-bind-ip 127.0.0.1` on the command line or `p2p-bind-ip=127.0.0.1` in
-  morelod.conf to disable listening for connections on external interfaces.
-* `--no-igd` on the command line or `no-igd=1` in morelod.conf to disable IGD
+  pepeprivated.conf to disable listening for connections on external interfaces.
+* `--no-igd` on the command line or `no-igd=1` in pepeprivated.conf to disable IGD
   (UPnP port forwarding negotiation), which is pointless with Tor.
 * `DNS_PUBLIC=tcp` or `DNS_PUBLIC=tcp://x.x.x.x` where x.x.x.x is the IP of the
   desired DNS server, for DNS requests to go over TCP, so that they are routed
-  through Tor. When IP is not specified, morelod uses the default list of
+  through Tor. When IP is not specified, pepeprivated uses the default list of
   servers defined in [src/common/dns_utils.cpp](src/common/dns_utils.cpp).
-* `TORSOCKS_ALLOW_INBOUND=1` to tell torsocks to allow morelod to bind to interfaces
+* `TORSOCKS_ALLOW_INBOUND=1` to tell torsocks to allow pepeprivated to bind to interfaces
    to accept connections from the wallet. On some Linux systems, torsocks
    allows binding to localhost by default, so setting this variable is only
    necessary to allow binding to local LAN/VPN interfaces to allow wallets to
    connect from remote hosts. On other systems, it may be needed for local wallets
    as well.
 * Do NOT pass `--detach` when running through torsocks with systemd, (see
-  [utils/systemd/morelod.service](utils/systemd/morelod.service) for details).
+  [utils/systemd/pepeprivated.service](utils/systemd/pepeprivated.service) for details).
 * If you use the wallet with a Tor daemon via the loopback IP (eg, 127.0.0.1:9050),
   then use `--untrusted-daemon` unless it is your own hidden service.
 
-Example command line to start morelod through Tor:
+Example command line to start pepeprivated through Tor:
 
-`DNS_PUBLIC=tcp torsocks morelod --p2p-bind-ip 127.0.0.1 --no-igd`
+`DNS_PUBLIC=tcp torsocks pepeprivated --p2p-bind-ip 127.0.0.1 --no-igd`
 
 ### Using Tor on Tails
 
@@ -515,12 +499,12 @@ TAILS ships with a very restrictive set of firewall rules. Therefore, you need
 to add a rule to allow this connection too, in addition to telling torsocks to
 allow inbound connections. Full example:
 
-`$ sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 19994 -j ACCEPT`
-`$ DNS_PUBLIC=tcp torsocks ./morelod --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
+`$ sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 18994 -j ACCEPT`
+`$ DNS_PUBLIC=tcp torsocks ./pepeprivated --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
         --data-dir /home/amnesia/Persistent/your/directory/to/the/blockchain`
 ## Debugging
 
-This section contains general instructions for debugging failed installs or problems encountered with Morelo. First ensure you are running the latest version built from the Github repository.
+This section contains general instructions for debugging failed installs or problems encountered with Pepeprivate. First ensure you are running the latest version built from the Github repository.
 
 ### Obtaining stack traces and core dumps on Unix systems
 
@@ -532,7 +516,7 @@ Run the build.
 
 Once it stalls, enter the following command:
 
-`$ gdb /path/to/morelod `pidof morelod``
+`$ gdb /path/to/pepeprivated `pidof pepeprivated``
 
 Type `thread apply all bt` within gdb in order to obtain the stack trace
 
@@ -544,27 +528,27 @@ Enter `echo core | sudo tee /proc/sys/kernel/core_pattern` to stop cores from be
 
 Run the build.
 
-When it terminates with an output along the lines of "Segmentation fault (core dumped)", there should be a core dump file in the same directory as morelod. It may be named just `core`, or `core.xxxx` with numbers appended.
+When it terminates with an output along the lines of "Segmentation fault (core dumped)", there should be a core dump file in the same directory as pepeprivated. It may be named just `core`, or `core.xxxx` with numbers appended.
 
 You can now analyse this core dump with `gdb` as follows:
 
-`$ gdb /path/to/morelod /path/to/dumpfile`
+`$ gdb /path/to/pepeprivated /path/to/dumpfile`
 
 Print the stack trace with `bt`
 
-* To run morelo within gdb:
+* To run pepeprivate within gdb:
 
-Type `$gdb /path/to/morelod`
+Type `$gdb /path/to/pepeprivated`
 
 Pass command-line options with `--args` followed by the relevant arguments
 
-Type `run` to run morelod
+Type `run` to run pepeprivated
 
 ### Analysing memory corruption
 
 We use the tool `valgrind` for this.
 
-Run with `valgrind /path/to/morelod`. It will be slow.
+Run with `valgrind /path/to/pepeprivated`. It will be slow.
 
 ### LMDB
 
@@ -572,7 +556,7 @@ Instructions for debugging suspected blockchain corruption as per @HYC
 
 There is an `mdb_stat` command in the LMDB source that can print statistics about the database but it's not routinely built. This can be built with the following command:
 
-`$ cd ~/morelo/external/liblmdb && make`
+`$ cd ~/pepeprivate/external/liblmdb && make`
 
 The output of `mdb_stat -ea <path to blockchain dir>` will indicate inconsistencies in the blocks, block_heights and block_info table.
 

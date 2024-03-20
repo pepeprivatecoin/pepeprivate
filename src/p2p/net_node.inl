@@ -464,26 +464,31 @@ namespace nodetool
     std::set<std::string> full_addrs;
     if (nettype == cryptonote::TESTNET)
     {
-      full_addrs.insert("188.68.231.40:38311");
-      full_addrs.insert("80.60.19.222:38311");
+      full_addrs.insert("84.247.153.41:28993");
+      full_addrs.insert("84.247.153.40:28993");
+      full_addrs.insert("84.247.153.39:28993");
     }
     else if (nettype == cryptonote::STAGENET)
     {
-      full_addrs.insert("188.68.231.40:38321");
-      full_addrs.insert("80.60.19.222:38321");
+      full_addrs.insert("84.247.153.41:38993");
+      full_addrs.insert("84.247.153.40:38993");
+      full_addrs.insert("84.247.153.39:38993");
+      full_addrs.insert("84.247.153.39:38993");
+      full_addrs.insert("84.247.153.39:38993");
     }
     else if (nettype == cryptonote::FAKECHAIN)
     {
     }
     else
     {
-      full_addrs.insert("80.60.19.222:38301"); //sniperviperman EU
-      full_addrs.insert("41.164.183.226:38301"); //Kaktus Africa
-      full_addrs.insert("41.164.183.225:38301"); //Kaktus Africa
-      full_addrs.insert("104.202.163.72:38301"); //DocJray  USA
-      full_addrs.insert("136.243.156.104:38301"); //MrKris7100's Home
-      full_addrs.insert("130.162.249.49:38301"); //MrKris7100's Oracle 1
-      full_addrs.insert("193.122.56.95:38301"); //MrKris7100's Oracle 2
+      full_addrs.insert("84.247.153.41:18993");
+      full_addrs.insert("84.247.153.40:18993");
+      full_addrs.insert("84.247.153.39:18993");
+      full_addrs.insert("207.180.197.202:18993");
+      full_addrs.insert("207.180.197.103:18993");
+      full_addrs.insert("207.180.196.171:18993");
+      full_addrs.insert("31.220.98.108:18993");
+	  full_addrs.insert("31.220.98.107:18993");
     }
     return full_addrs;
   }

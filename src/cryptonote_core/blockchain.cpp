@@ -1,4 +1,4 @@
-// Copyright (c) 2019-2022, The Morelo Network
+// Copyright (c) 2019-2022, The PepePrivate Network
 // Copyright (c) 2018-2019, The Arqma Network
 // Copyright (c) 2014-2018, The Monero Project
 //
@@ -91,9 +91,9 @@ static const struct {
  time_t time;
 } mainnet_hard_forks[] = {
  // version 1 from the start of the blockchain
- { 1, 0, 0, 1341378000 },
- { 15, 1, 0, 1573257000 },
- { 16, 235000, 0, 1687982396 }, 
+ { 1, 0, 0, 1710959452 },
+ { 15, 1, 0, 2026517452 },
+ { 16, 235000, 0, 2152747852 },
 };
 
 static const struct {
@@ -103,9 +103,9 @@ static const struct {
  time_t time;
 } testnet_hard_forks[] = {
  // version 1 from the start of the blockchain
- { 1, 0, 0, 1341378000 },
- { 15, 1, 0, 1573257000 },
- { 16, 235000, 0, 1687982396 },
+ { 1, 0, 0, 1710959452 },
+ { 15, 1, 0, 2026517452 },
+ { 16, 235000, 0, 2152747852 },
 };
 
 static const struct {
@@ -115,9 +115,9 @@ static const struct {
  time_t time;
 } stagenet_hard_forks[] = {
  // version 1 from the start of the blockchain
- { 1, 0, 0, 1341378000 },
- { 15, 1, 0, 1573257000 },
- { 16, 235000, 0, 1687982396 },
+{ 1, 0, 0, 1710959452 },
+ { 15, 1, 0, 2026517452 },
+ { 16, 235000, 0, 2152747852 },
 };
 //------------------------------------------------------------------
 Blockchain::Blockchain(tx_memory_pool& tx_pool) :
@@ -480,7 +480,7 @@ bool Blockchain::init(BlockchainDB* db, const network_type nettype, bool offline
     }
     catch( const std::exception& e)
     {
-      MERROR(std::string("Failed to construct Morelo notifier ") + e.what());
+      MERROR(std::string("Failed to construct PepePrivate notifier ") + e.what());
     }
  }
 
@@ -626,7 +626,7 @@ block Blockchain::pop_block_from_blockchain()
   block popped_block;
   std::vector<transaction> popped_txs;
 
-  CHECK_AND_ASSERT_THROW_MES(m_db->height() > 1, "It is forbidden to remove Morelo Genesis Block.");
+  CHECK_AND_ASSERT_THROW_MES(m_db->height() > 1, "It is forbidden to remove PepePrivate Genesis Block.");
 
   try
   {
@@ -1348,7 +1348,7 @@ if(version >= 16)
 
   if(height == 1)
   {
-    base_reward = config::blockchain_settings::MONEY_PREMINE;
+    base_reward = MONEY_PREMINE;
   }
   else if(height > 1 && base_reward + fee < money_in_use)
   {
@@ -3733,7 +3733,7 @@ leave:
     const el::Level level = el::Level::Warning;
     MCLOG_RED(level, "global", "**********************************************************************");
     MCLOG_RED(level, "global", "A block was seen on the network with a version higher than the last");
-    MCLOG_RED(level, "global", "known one. This may be an old version of the Morelo daemon, and a software");
+    MCLOG_RED(level, "global", "known one. This may be an old version of the PepePrivate daemon, and a software");
     MCLOG_RED(level, "global", "update may be required to sync further. ");
     MCLOG_RED(level, "global", "**********************************************************************");
   }
@@ -4094,7 +4094,7 @@ leave:
     }
     catch( const std::exception& e)
     {
-      MERROR(std::string("Failed to construct morelo block producer") + e.what());
+      MERROR(std::string("Failed to construct pepeprivate block producer") + e.what());
     }
   }
 
@@ -4299,7 +4299,7 @@ void Blockchain::check_against_checkpoints(const checkpoints& points, bool enfor
       }
       else
       {
-        LOG_ERROR("WARNING: local blockchain failed to pass a Morelo Network checkpoint, and you could be on a fork. You should either sync up from scratch, OR download a fresh blockchain bootstrap, OR enable checkpoint enforcing with the --enforce-dns-checkpointing command-line option");
+        LOG_ERROR("WARNING: local blockchain failed to pass a PepePrivate Network checkpoint, and you could be on a fork. You should either sync up from scratch, OR download a fresh blockchain bootstrap, OR enable checkpoint enforcing with the --enforce-dns-checkpointing command-line option");
       }
     }
   }

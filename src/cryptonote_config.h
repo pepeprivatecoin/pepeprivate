@@ -1,5 +1,5 @@
-// Copyright (c) 2019-2022, The Morelo Network
-// Copyright (c) 2018-2019, The Arqma Network
+// Copyright (c) 2024 Pepe Private
+// Copyright (c) 2018-2019, The Arqma Network 
 // Copyright (c) 2014-2018, The Monero Project
 //
 // All rights reserved.
@@ -51,7 +51,7 @@
 #define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V9            BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V2
 
 // MONEY_SUPPLY - total number coins to be generated
-#define MONEY_SUPPLY                                    ((uint64_t)75000000000000000)
+#define MONEY_SUPPLY                                    ((uint64_t)21000000000000000)
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (21)
 #define EMISSION_SPEED_FACTOR_V16                       (20)
 #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000)
@@ -155,7 +155,7 @@
 
 #define ALLOW_DEBUG_COMMANDS
 
-#define CRYPTONOTE_NAME                                 "morelo"
+#define CRYPTONOTE_NAME                                 "pepeprivate"
 #define CRYPTONOTE_POOLDATA_FILENAME                    "poolstate.bin"
 #define CRYPTONOTE_BLOCKCHAINDATA_FILENAME              "data.mdb"
 #define CRYPTONOTE_BLOCKCHAINDATA_LOCK_FILENAME         "lock.mdb"
@@ -203,48 +203,48 @@ namespace config
    uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)100000);
    std::string const P2P_REMOTE_DEBUG_TRUSTED_PUB_KEY = "0000000000000000000000000000000000000000000000000000000000000000";
 
-   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x1a29e1; // Wallet prefix: emo MainNet
-   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x8a8e1; // Wallet prefix: emi MainNet
-   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0xeaae1; // Wallet prefix: ems MainNet
-   uint16_t const P2P_DEFAULT_PORT = 38301;
-   uint16_t const RPC_DEFAULT_PORT = 38302;
-   uint16_t const ZMQ_DEFAULT_PORT = 38303;
+   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x2cb404; // Wallet prefix: PEPE
+   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x1bec3404; // Wallet prefix: PEPEP
+   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x26b6c3404; // Wallet prefix: PEPEPV
+   uint16_t const P2P_DEFAULT_PORT = 16993;
+   uint16_t const RPC_DEFAULT_PORT = 16994;
+   uint16_t const ZMQ_DEFAULT_PORT = 17995;
    boost::uuids::uuid const NETWORK_ID = { {
-       0x01, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x44, 0x13, 0xFF, 0xFF, 0xFF, 0x55, 0x11, 0x1A
-     } }; // 
-   std::string const GENESIS_TX = "011201ff00011e026bc5c7db8a664f652d78adb587ac4d759c6757258b64ef9cba3c0354e64fb2e42101abca6a39c561d0897be183eb0143990eba201aa7d2c652ab0555d28bb4b70728";
-   uint32_t const GENESIS_NONCE = 38311;
+       0x12, 0x14, 0x11, 0x12, 0xF7, 0xF7, 0xF7, 0x07, 0x07, 0x07, 0xF7, 0xF7, 0xF8, 0x16, 0x16, 0x1A
+     } }; //
+   std::string const GENESIS_TX = "021201ff000189e1b19b9501026b2cf32afeda85ee692f0340620da4a48f81e10faccd8abaed774953a532d38f210166a6795f34774e6cb4e5bf600b94ca9d41a880d987d5403857aaa52e9e1bcc1300";
+   uint32_t const GENESIS_NONCE = 17993;
 
    namespace testnet
    {
-     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x80662; // Wallet prefix: eto... // decimal prefix: 21450
-     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x4562; // Wallet prefix: eti... // decimal prefix: 20554
-     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x4762; // Wallet prefix: ets... // decimal prefix: 21066
-     uint16_t const P2P_DEFAULT_PORT = 38311;
-	 uint16_t const RPC_DEFAULT_PORT = 38312;
-	 uint16_t const ZMQ_DEFAULT_PORT = 38313;
+     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0xc8c3404; // Wallet prefix: at... // decimal prefix: PEPEA
+     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0xdac3404; // Wallet prefix: ati... // decimal prefix: PEPEB
+     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0xecc3404; // Wallet prefix: ats... // decimal prefix: PEPEC
+     uint16_t const P2P_DEFAULT_PORT = 28993;
+     uint16_t const RPC_DEFAULT_PORT = 28994;
+     uint16_t const ZMQ_DEFAULT_PORT = 28995;
      boost::uuids::uuid const NETWORK_ID = { {
-         0x01, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x44, 0x13, 0xFF, 0xFF, 0xFF, 0x55, 0x11, 0x1B
-       } }; // TEST
+         0x12, 0x12, 0x12, 0x15, 0xF2, 0xF1, 0xF0, 0x15, 0x14, 0x12, 0xF4, 0xF5, 0xF3, 0x12, 0x12, 0x1B
+       } }; // Bender's daydream
    }
 
    namespace stagenet
    {
-     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x7b62; // Wallet prefix: exo... // decimal prefix: 14794
-     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x19f9e2; // Wallet prefix: exi... // decimal prefix: 1524426
-     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x1ffbe2; // Wallet prefix: exs... // decimal prefix: 1934538
-     uint16_t const P2P_DEFAULT_PORT = 38321;
-	 uint16_t const RPC_DEFAULT_PORT = 38322;
-	 uint16_t const ZMQ_DEFAULT_PORT = 38323;
+     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x28c3404; // Wallet prefix: as... // decimal prefix: PEPE1
+     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x3ac3404; // Wallet prefix: asi... // decimal prefix: PEPE2
+     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x4cc3404; // Wallet prefix: ass... // decimal prefix: PEPE3
+     uint16_t const P2P_DEFAULT_PORT = 38993;
+     uint16_t const RPC_DEFAULT_PORT = 38994;
+     uint16_t const ZMQ_DEFAULT_PORT = 38995;
      boost::uuids::uuid const NETWORK_ID = { {
-         0x01, 0x11, 0x11, 0x11, 0xFF, 0xFF, 0xFF, 0x11, 0x44, 0x13, 0xFF, 0xFF, 0xFF, 0x55, 0x11, 0x1C
-       } }; // STAGE
+         0x12, 0x16, 0x19, 0x18, 0xF0, 0xF1, 0xF4, 0x15, 0x16, 0x12, 0xF0, 0xF4, 0xF5, 0x12, 0x15, 0x1C
+       } }; // Bender's daydream
    }
 
    namespace blockchain_settings
    {
-     const uint64_t PREMINE_BURN = 47000000000000000; // Will need to be set after knowing exact amount.
-     const uint64_t MONEY_PREMINE = 47000000000000000; // Premine amnount
+     const uint64_t PREMINE_BURN = 0; // 
+     const uint64_t MONEY_PREMINE = 2100000000000000; // 
      const uint64_t MAXIMUM_BLOCK_SIZE_LIMIT = 2 * 1024 * 1024; // It is set to 2048kB (2MB)
      const uint64_t MINIMUM_BLOCK_SIZE_LIMIT = 1 * 1024 * 1024; // It is set to 1024kB (1MB)
      const uint8_t ARQMA_GENESIS_BLOCK_MAJOR_VERSION = 1;
@@ -255,7 +255,7 @@ namespace config
    namespace tx_settings
    {
      const uint8_t ARQMA_TX_CONFIRMATIONS_REQUIRED = 4; // How many blocks are needed to confirm transaction sent.
-     const uint8_t ARQMA_TX_VERSION = 2; // Current Transaction Version Valid on Morelo Network
+     const uint8_t ARQMA_TX_VERSION = 2; // Current Transaction Version Valid on PepePrivate Network
      const uint64_t TRANSACTION_SIZE_LIMIT = 48 * 1024; // I did set it to 48kB for now but it need to be verified.
      const uint64_t MAX_TRANSACTIONS_IN_BLOCK = 1024; // Maximum allowed transactions in One Block
    }
@@ -269,9 +269,9 @@ namespace config
 
    namespace governance
    {
-	 static constexpr const char* MAINNET_WALLET_ADDRESS = "emo1hsdY9BLhGUUZqFqNUgGowHwEcW9LzQ9kjN8GJrqbBhXe6L37gZ5Y2pa8eNRiyzabyP8ScDyi2hcbzH4akSvE8SuYr1dFeX";
-     static constexpr const char* TESTNET_WALLET_ADDRESS = "eto1UJjpbxTgM2kzrQNgrkazZLCyhGvcHaoFvsHypZ8JdvsXFQ9kb6zEMAxxJrkzBWKx1ZgxArfgiTudcrUvFBya7EwgQiftGn";
-     static constexpr const char* STAGENET_WALLET_ADDRESS = "exoiwUAF2AEDC8oniRiMXKEkmsLEtw7XNVm2Lc2NJsejU4nN2zWrCF9cjrPgEgUeiHLQ8gNkwyoHVRmkGpS87Eqh4G1yAjseHF";
+	 static constexpr const char* MAINNET_WALLET_ADDRESS = "";
+     static constexpr const char* TESTNET_WALLET_ADDRESS = "";
+     static constexpr const char* STAGENET_WALLET_ADDRESS = "";
    }
 }
 
