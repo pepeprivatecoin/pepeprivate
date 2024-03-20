@@ -212,7 +212,7 @@ namespace config
    boost::uuids::uuid const NETWORK_ID = { {
        0x12, 0x14, 0x11, 0x12, 0xF7, 0xF7, 0xF7, 0x07, 0x07, 0x07, 0xF7, 0xF7, 0xF8, 0x16, 0x16, 0x1A
      } }; //
-   std::string const GENESIS_TX = "021201ff000189e1b19b9501026b2cf32afeda85ee692f0340620da4a48f81e10faccd8abaed774953a532d38f210166a6795f34774e6cb4e5bf600b94ca9d41a880d987d5403857aaa52e9e1bcc1300";
+   std::string const GENESIS_TX = "";
    uint32_t const GENESIS_NONCE = 17993;
 
    namespace testnet
@@ -244,7 +244,7 @@ namespace config
    namespace blockchain_settings
    {
      const uint64_t PREMINE_BURN = 0; // 
-     const uint64_t MONEY_PREMINE = 2100000000000000; // 
+     const uint64_t MONEY_PREMINE = 2625000000000000; // 
      const uint64_t MAXIMUM_BLOCK_SIZE_LIMIT = 2 * 1024 * 1024; // It is set to 2048kB (2MB)
      const uint64_t MINIMUM_BLOCK_SIZE_LIMIT = 1 * 1024 * 1024; // It is set to 1024kB (1MB)
      const uint8_t ARQMA_GENESIS_BLOCK_MAJOR_VERSION = 1;
