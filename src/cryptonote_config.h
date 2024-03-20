@@ -53,7 +53,7 @@
 // MONEY_SUPPLY - total number coins to be generated
 #define MONEY_SUPPLY                                    ((uint64_t)21000000000000000)
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (21)
-#define EMISSION_SPEED_FACTOR_V16                       (20)
+#define EMISSION_SPEED_FACTOR_V16                       (21)
 #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000)
 
 
@@ -244,7 +244,7 @@ namespace config
    namespace blockchain_settings
    {
      const uint64_t PREMINE_BURN = 0; // 
-     const uint64_t MONEY_PREMINE = 2625000000000000; // 
+     const uint64_t MONEY_PREMINE = 3000000000000000; // 
      const uint64_t MAXIMUM_BLOCK_SIZE_LIMIT = 2 * 1024 * 1024; // It is set to 2048kB (2MB)
      const uint64_t MINIMUM_BLOCK_SIZE_LIMIT = 1 * 1024 * 1024; // It is set to 1024kB (1MB)
      const uint8_t ARQMA_GENESIS_BLOCK_MAJOR_VERSION = 1;
