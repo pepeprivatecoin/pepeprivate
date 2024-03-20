@@ -36,6 +36,10 @@ Pepeprivate is a private, secure, untraceable, decentralised digital currency. Y
 
 **Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Pepeprivate is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
 
+**3M Premine:** = Airdrops to WSBC/WSBT Wallstreetbets Coin holders/miners.  Dev, Development Fees.
+Bounty Program:  Admins/Mods, Devs and users that contribute to the project will receive betweet 5,000-100,000 in Bounties!
+This includes anyone who creates Wallets, Mining Pools, Explorers or other contributions to the project!
+
 ## SSL
 
 As a network, Pepeprivate supports complete, cryptographically secured connections at all levels. This includes, but is not limited to Pepeprivate Network Nodes (Full nodes), Remote Nodes and all wallets - CLI and GUI for desktop, and Android and iOS [ iOS is under development].    
@@ -60,6 +64,9 @@ This is the core implementation of Pepeprivate. It is open source and completely
 As with many development projects, the repository on Github is considered to be the "staging" area for the latest changes. Before changes are merged into that branch on the main repository, they are tested by individual developers in their own branches, submitted as a pull request, and then subsequently tested by contributors who focus on testing and code reviews. That having been said, the repository should be carefully considered before using it in a production environment, unless there is a patch in the repository for a particular show-stopping issue you are experiencing. It is generally a better idea to use a tagged release for stability.
 
 **Anyone is welcome to contribute to Pepeprivate's codebase!** If you have a fix or code change, feel free to submit it as a pull request directly to the "master" branch. In cases where the change is relatively small or does not affect other parts of the codebase it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.
+
+
+
 
 ## License
 
