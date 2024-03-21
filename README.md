@@ -37,7 +37,7 @@ Pepeprivate is a private, secure, untraceable, decentralised digital currency. Y
 **Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Pepeprivate is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
 
 **3M Premine:** = Airdrops to WSBC/WSBT Wallstreetbets Coin holders/miners.  Dev, Development Fees.
-Bounty Program:  Admins/Mods, Devs and users that contribute to the project will receive betweet 5,000-100,000 in Bounties!
+Bounty Program:  Admins/Mods, Devs and users that contribute to the project will receive between 5,000-100,000 in Bounties!
 This includes anyone who creates Wallets, Mining Pools, Explorers or other contributions to the project!
 
 ## SSL
