@@ -100,6 +100,7 @@ Install Cmake and Boost Commands (if needed):
 
 
 wget https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3.tar.gz
+
 tar -xvf cmake-3.17.3.tar.gz
 cd cmake-3.17.3
 ./bootstrap
@@ -107,6 +108,7 @@ make
 sudo make install
 
 wget https://boostorg.jfrog.io/artifactory/main/release/1.73.0/source/boost_1_73_0.tar.gz
+
 tar -xvf boost_1_73_0.tar.gz
 cd boost_1_73_0
 ./bootstrap.sh
